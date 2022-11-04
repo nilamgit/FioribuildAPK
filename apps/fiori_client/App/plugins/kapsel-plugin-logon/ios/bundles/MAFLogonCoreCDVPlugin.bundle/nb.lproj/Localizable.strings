@@ -1,0 +1,12 @@
+/* XTIT: Dialog title */
+"change_password" = "Passord er endret.";
+
+/* XBUT: ok button */
+"ok" = "OK";
+
+/* XMSG: password changed message */
+"change_password_reaload" = "Passordet er endret. Siden lastes inn på nytt.";
+
+/* XMSG: scan fingerprint message */
+"scan_fingerprint" = "Skann fingeravtrykk for å logge på.";
+

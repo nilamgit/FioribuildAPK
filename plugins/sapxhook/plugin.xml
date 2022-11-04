@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="kapsel-plugin-xhook"
+    version="4.5.3">
+
+    <name>Xhook</name>
+
+    <engines>
+      <engine name="cordova" version="&gt;=9.0.0" />
+      <engine name="cordova-android" version="&gt;=9.0.0" />
+      <engine name="cordova-ios" version="&gt;=6.1.0" />
+      <engine name="cordova-windows" version="&gt;=6.0.0" />
+    </engines>
+    
+    <js-module name="Xhook" src="www/xhooks.js">
+        <clobbers target="sap.Xhook"/>
+    </js-module>
+
+</plugin>

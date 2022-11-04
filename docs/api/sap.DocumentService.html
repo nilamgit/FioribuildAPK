@@ -1,0 +1,3360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Namespace: DocumentService</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Namespace: DocumentService</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="sap.html">sap</a>.</span>
+        
+        DocumentService
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">This plugin provides Document Service integration and synchronization functionality.<br/>
+<br/>
+<br/>
+<b>Adding and Removing the Document Service Plugin</b><br/>
+The Document Service plugin is added and removed using the
+<a href="http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-line%20Interface">Cordova CLI</a>.<br/>
+<br/>
+To add the Document Service plugin to your project, use the following command:<br/>
+cordova plugin add kapsel-plugin-document-service<br/>
+<br/>
+To remove the Document Service plugin from your project, use the following command:<br/>
+cordova plugin rm kapsel-plugin-document-service</div>
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="FILE_DECRYPTION_FAIL"><span class="type-signature">(constant) </span>FILE_DECRYPTION_FAIL<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    This error code indicates that file decryption has failed using stored password.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="FILE_TRANSFER_FAIL"><span class="type-signature">(constant) </span>FILE_TRANSFER_FAIL<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    This error code indicates an error occurred when using the Cordova File Transfer Plugin.
+More description can be found on https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-file-transfer/#filetransfererror
+(eg: failure in download/upload)
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="FILE_TYPE_INCORRECT"><span class="type-signature">(constant) </span>FILE_TYPE_INCORRECT<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    This error code indicates that a file with unexpected file type has been detected.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="LOCAL_FILE_SYSTEM_ERR"><span class="type-signature">(constant) </span>LOCAL_FILE_SYSTEM_ERR<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    This error code indicates an error occurred from local file system operations.
+(eg: fail to read/create/delete local file/directory, fail to get file metadata)
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="OBJECT_CANNOT_BE_PARSED"><span class="type-signature">(constant) </span>OBJECT_CANNOT_BE_PARSED<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    This error code indicates that the object body from response cannot be parsed.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="REMOTE_FILE_SYSTEM_ERR"><span class="type-signature">(constant) </span>REMOTE_FILE_SYSTEM_ERR<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    This error code indicates an error occurred from server side file system operations.
+(eg: fail to read/create/delete remote file/directory)
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="RESUMABLE_HANDLING_ERR"><span class="type-signature">(constant) </span>RESUMABLE_HANDLING_ERR<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    This error code indicates that an error has occurred when handling resumable download.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="STORAGE_PERMISSION_NOT_ON"><span class="type-signature">(constant) </span>STORAGE_PERMISSION_NOT_ON<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    This error code indicates that an error occurred when device permission on storage operations is not turned on.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".createFolder"><span class="type-signature">(static) </span>createFolder<span class="signature">(folderName, folderPath, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Create a new folder in the specified path</p>
+    
+
+
+
+<div class="description">
+    Creates a new folder in the remote repository of the connected session.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>folderName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Name of the new folder</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>folderPath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Path where the new folder is located</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error callback function</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>sap.DocumentService.createFolder("New Folder", "/", successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".createLocalFolder"><span class="type-signature">(static) </span>createLocalFolder<span class="signature">(folderPath, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Create a new local folder in the specified path</p>
+    
+
+
+
+<div class="description">
+    Creates a new folder in the local repository of the connected session.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>folderPath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Path where the new folder is located including the folder name</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error callback function</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>sap.DocumentService.createLocalFolder("/New Folder", successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".createSession"><span class="type-signature">(static) </span>createSession<span class="signature">(serverURL, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Create a new session to the CMIS document repository</p>
+    
+
+
+
+<div class="description">
+    Creates a session that connects to the SAP server and prepares your application to utilize online features of the plugin.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>serverURL</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">URL to CPMs application</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error callback function</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>sap.DocumentService.createSession("https://hcpms-ixxxxxxtrial.hanatrial.ondemand.com/mobileservices/persistence/v1/json/com.example.app/", successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".deleteLocal"><span class="type-signature">(static) </span>deleteLocal<span class="signature">(filePath, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Delete a File/Folder from local device</p>
+    
+
+
+
+<div class="description">
+    Deletes a file on the local device. File is located at the provided file path and the path is relative to the root folder
+of the repository.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>filePath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Path where the file/folder is located</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error callback function</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>sap.DocumentService.deleteLocal("/", successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".deleteRemote"><span class="type-signature">(static) </span>deleteRemote<span class="signature">(filePath, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Delete a File/Folder from remote server</p>
+    
+
+
+
+<div class="description">
+    Deletes a file on the remote server. File is located at the provided file path and the path is relative to the root folder
+of the repository. Calls the error callback if remote folder is not empty.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>filePath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Path where the file/folder is located</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error callback function</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>sap.DocumentService.deleteRemote("/", successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".download"><span class="type-signature">(static) </span>download<span class="signature">(filePath, overwrite, successCallback, errorCallback, progressCallback)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Download specified file/folder from the server to the device</p>
+    
+
+
+
+<div class="description">
+    Download the specified file path, which should be given relative to the remote repository root, to the equivalent local folder. 
+It creates intermediate folders if necessary. If the overwrite flag is set, existing local files/folders will be replaced with the remote 
+copy. If not, it calls the error callback with an error object showing the details of the conflicting files.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>filePath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Path of file/folder on the server, defaults to root</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>overwrite</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Overwrite existing local files</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>progressCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Progress callback function</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>sap.DocumentService.download('/', successCallback, errorCallback, progressCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".exit"><span class="type-signature">(static) </span>exit<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Delete all decrypted files on plugin exit
+
+This function should be called when the application is being closed/loses focus. It deletes all files in the decrypted 
+directory to prevent unauthorized access outside of the application.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".init"><span class="type-signature">(static) </span>init<span class="signature">(successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Initialize the Document Service Plugin. Must be called before any other functions.
+
+This function first calls the android file system to request file permissions to write to storage. It then
+creates directories for both encrypted (if encryption is enabled ) and unencrypted files using config parameters
+where they are available
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error callback function</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".isFileDownloaded"><span class="type-signature">(static) </span>isFileDownloaded<span class="signature">(filePath, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Checks whether a file exists locally</p>
+    
+
+
+
+<div class="description">
+    Checks if a file exists locally and calls the success callback with the string concatenation of the 
+filename, a colon (:) and a boolean.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>filePath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Path where the downloaded file is located</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error callback function</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>sap.DocumentService.isFileDownloaded("/Mario/koopa.png", successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".listLocal"><span class="type-signature">(static) </span>listLocal<span class="signature">(targetFolderPath, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">List local files in specified path in JSON format</p>
+    
+
+
+
+<div class="description">
+    Calls the local system to obtain a list of all files in the specified path relative to the root folder. Returns an array 
+containing objects representing a file or folder. The array also contains a boolean value that shows if the folder being 
+listed is the root of the connected repository.
+
+<p>Return Structure:</p>
+<ul>
+<li>{</li>
+<li>    isRootFolder: true</li>
+<li>    Object[0]:{name:"Folder1Name", type:"Local Folder"},</li>
+<li>    Object[1]:{name:"File1Name", type:"Local File"}</li>
+<li>}</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>targetFolderPath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Local path to list all the files/folders</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error callback function</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>sap.DocumentService.listLocalFiles("/",successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".listRemote"><span class="type-signature">(static) </span>listRemote<span class="signature">(targetFolderPath, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">List remote files in specified path in JSON format</p>
+    
+
+
+
+<div class="description">
+    Calls the remote server to obtain a list of all files in the specified path relative to the root folder. Returns an array 
+containing objects representing a file or folder. The array also contains a boolean value that shows if the folder being 
+listed is the root of the connected repository.
+
+<p>Return Structure:</p>
+<ul>
+<li>{</li>
+<li>    isRootFolder: true</li>
+<li>    Object[0]:{name:"Folder1Name", type:"CMIS Folder"},</li>
+<li>    Object[1]:{name:"File1Name", type:"CMIS File"}</li>
+<li>}</li>
+<ul>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>targetFolderPath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Path where the target folder is located</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error callback function</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>sap.DocumentService.listRemote("/", successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".openFile"><span class="type-signature">(static) </span>openFile<span class="signature">(filePath, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Opens a local file</p>
+    
+
+
+
+<div class="description">
+    Use the attachment viewer plugin to open the target file. If the encryption option is on, decrypt the file before opening.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>filePath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Path of the file to open</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error callback function</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>sap.DocumentService.openFile("/Mario/koopa.png", successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".synchronization"><span class="type-signature">(static) </span>synchronization<span class="signature">(filePath, successCallback, errorCallback, progressCallback)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Sync updates of the specified files between the server and the device.</p>
+    
+
+
+
+<div class="description">
+    Syncs files by first performing a download and then an upload. Path must be provided relative to the root folder.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>filePath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Path of file/folder on the device/remote server to sync, defaults to root</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>progressCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Progress callback function</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>sap.DocumentService.synchronization('/', successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".upload"><span class="type-signature">(static) </span>upload<span class="signature">(filePath, overwrite, successCallback, progressCallback)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Upload specified file/folder from the device to the server</p>
+    
+
+
+
+<div class="description">
+    Upload the specified file path, which should be given relative to the local repository root, to the equivalent remote folder. 
+If the remote destination folder does not exist, an error is thrown. If the overwrite flag is set, existing remote files/folders will be 
+replaced with the local copy. If not, it calls the error callback with an error object showing the details of the conflicting files. This
+function does not exist if encryption is on because files in the local repository are not modifiable.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>filePath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Path of file/folder on the device, defaults to root</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>overwrite</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Overwrite existing remote files</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>progressCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Progress callback function</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>sap.DocumentService.upload('/', successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".uploadWithFilePicker"><span class="type-signature">(static) </span>uploadWithFilePicker<span class="signature">(destFolderPath, file, successCallback, errorCallback, progressCallback)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Upload a file using the webview file chooser to to the specified path</p>
+    
+
+
+
+<div class="description">
+    Used to upload files that are returned when an html input element is used to select the file from the device 
+to be uploaded to the specified destination folder. The folder path must be given relative to the remote root folder.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>destFolderPath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Path where the destination folder is located</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>file</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">File</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">File object being uploaded</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Success callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Error callback function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>progressCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Progress callback function</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>sap.DocumentService.uploadWithFilePicker("/", successCallback, errorCallback);</code></pre>
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="-_anonymous_-lib.createSession-CmisRequest.html">CmisRequest</a></li><li><a href="-_anonymous_-lib.createSession-session.html">session</a></li><li><a href="FileTransfer.html">FileTransfer</a></li><li><a href="FileTransferError.html">FileTransferError</a></li><li><a href="sap.AuthProxy_CertificateFromFile.html">CertificateFromFile</a></li><li><a href="sap.AuthProxy_CertificateFromLogonManager.html">CertificateFromLogonManager</a></li><li><a href="sap.AuthProxy_CertificateFromStore.html">CertificateFromStore</a></li><li><a href="sap.OfflineStore.html">OfflineStore</a></li><li><a href="sap.Usage.InfoType.html">InfoType</a></li><li><a href="sap.Usage.PrivacyPolicy.html">PrivacyPolicy</a></li></ul><h3>Events</h3><ul><li><a href="sap.AppUpdate.html#event:checking">checking</a></li><li><a href="sap.AppUpdate.html#event:downloading">downloading</a></li><li><a href="sap.AppUpdate.html#event:error">error</a></li><li><a href="sap.AppUpdate.html#event:insufficientspace">insufficientspace</a></li><li><a href="sap.AppUpdate.html#event:noupdate">noupdate</a></li><li><a href="sap.AppUpdate.html#event:progress">progress</a></li><li><a href="sap.AppUpdate.html#event:updateready">updateready</a></li><li><a href="sap.AppUpdate.html#event:updatetoolargeforcellular">updatetoolargeforcellular</a></li><li><a href="sap.CacheManager.html#event:cacheinvalidated">cacheinvalidated</a></li><li><a href="sap.CacheManager.html#event:noviewerfound">noviewerfound</a></li></ul><h3>Namespaces</h3><ul><li><a href="cordova.html">cordova</a></li><li><a href="cordova.plugins.html">plugins</a></li><li><a href="cordova.plugins.printer.html">printer</a></li><li><a href="sap.html">sap</a></li><li><a href="sap.AppPreferences.html">AppPreferences</a></li><li><a href="sap.AppSettings.html">AppSettings</a></li><li><a href="sap.AppUpdate.html">AppUpdate</a></li><li><a href="sap.AuthProxy.html">AuthProxy</a></li><li><a href="sap.AuthProxy.OAuth2.html">OAuth2</a></li><li><a href="sap.AuthProxy.OTP.html">OTP</a></li><li><a href="sap.AuthProxy.SAML2.html">SAML2</a></li><li><a href="sap.CacheManager.html">CacheManager</a></li><li><a href="sap.Consent.html">Consent</a></li><li><a href="sap.DocumentService.html">DocumentService</a></li><li><a href="sap.E2ETrace.html">E2ETrace</a></li><li><a href="sap.EncryptedStorage.html">EncryptedStorage</a></li><li><a href="sap.FioriClient.html">FioriClient</a></li><li><a href="sap.Logger.html">Logger</a></li><li><a href="sap.Logon.html">Logon</a></li><li><a href="sap.Logon.Core.html">Core</a></li><li><a href="sap.OData.html">OData</a></li><li><a href="sap.Online.html">Online</a></li><li><a href="sap.Push.html">Push</a></li><li><a href="sap.Settings.html">Settings</a></li><li><a href="sap.Toolbar.html">Toolbar</a></li><li><a href="sap.Usage.html">Usage</a></li><li><a href="sap.VoiceRecording.html">VoiceRecording</a></li></ul><h3>Interfaces</h3><ul><li><a href="sap.VoiceRecording.Recording.html">Recording</a></li></ul><h3>Global</h3><ul><li><a href="global.html#checkAgreement">checkAgreement</a></li><li><a href="global.html#checkAndOpenEulaPsDialog">checkAndOpenEulaPsDialog</a></li><li><a href="global.html#credentialCallback">credentialCallback</a></li><li><a href="global.html#defaultPsFileName">defaultPsFileName</a></li><li><a href="global.html#getURLInfo">getURLInfo</a></li><li><a href="global.html#getWwwAppDirectory">getWwwAppDirectory</a></li><li><a href="global.html#handleDenyAgreement">handleDenyAgreement</a></li><li><a href="global.html#isChinaMainland">isChinaMainland</a></li><li><a href="global.html#isNull">isNull</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#logVersionBuildTime">logVersionBuildTime</a></li><li><a href="global.html#newNullLiteral">newNullLiteral</a></li><li><a href="global.html#precheckEulaPsDialog">precheckEulaPsDialog</a></li><li><a href="global.html#presetEulaPsTitle">presetEulaPsTitle</a></li><li><a href="global.html#readAppConfigForEulaPs">readAppConfigForEulaPs</a></li><li><a href="global.html#removeAgreement">removeAgreement</a></li><li><a href="global.html#removeAgreementForUser">removeAgreementForUser</a></li><li><a href="global.html#saveAgreement">saveAgreement</a></li><li><a href="global.html#saveAgreementForUser">saveAgreementForUser</a></li><li><a href="global.html#showEulaAndPs">showEulaAndPs</a></li><li><a href="global.html#validateHTMLText">validateHTMLText</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0</a>
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

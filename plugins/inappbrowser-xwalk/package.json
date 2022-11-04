@@ -1,0 +1,16 @@
+{
+  "name": "@sap/kapsel-plugin-inappbrowser-xwalk",
+  "version": "4.5.3",
+  "description": "Cordova Crosswalk InAppBrowser Plugin",
+  "cordova": {
+    "id": "kapsel-plugin-inappbrowser-xwalk",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "SAP SE"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@sap/kapsel-plugin-fioriclient",
+  "version": "4.5.3",
+  "description": "Kapsel Fiori Client Plugin",
+  "cordova": {
+    "id": "kapsel-plugin-fioriclient",
+    "platforms": [
+      "android",
+      "ios",
+      "windows"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-windows"
+  ],
+  "author": "SAP SE"
+}

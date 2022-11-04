@@ -1,0 +1,23 @@
+{
+    "packageName": "com.ril.fiori.mpower",
+    "targetFolder": "AppIdMPower",
+    "appName": "MPower Retail",
+    "platforms": [
+        "android"
+    ],
+    "cordovaPluginIncludes": [
+        "cordova-plugin-mock-gps-checker",
+        "cordova-plugin-android-gpsdetect",
+        "cordova-plugin-root-detection"
+    ],
+    "cordovaPluginExcludes": [
+        "@sap/kapsel-plugin-push",
+        "@sap/kapsel-plugin-federationprovider@*",
+        "cordova-plugin-contacts@*",
+        "@sap/kapsel-plugin-encryptedstorage@*",
+        "@sap/kapsel-plugin-calendar@*",
+        "@sap/kapsel-plugin-voicerecording@*",
+        "@sap/kapsel-plugin-usage@*"
+    ],
+    "crosswalkEnabled": false
+}

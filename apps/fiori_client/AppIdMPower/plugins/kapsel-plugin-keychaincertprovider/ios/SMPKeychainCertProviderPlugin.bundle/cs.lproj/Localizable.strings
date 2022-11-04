@@ -1,0 +1,45 @@
+/* XMSG */
+"incorrect_password" = "Nesprávné heslo, opakujte zadání.";
+
+/* XMSG */
+"please_input" = "Zadejte heslo k certifikátu.";
+
+/* XTIT: Dialog title */
+"import_certificate" = "Importovat certifikát.";
+
+/* XBUT: Ok buton */
+"ok" = "OK";
+
+/* XMSG */
+"fail_to_import" = "Klientský certifikát (%d) nebyl importován.";
+
+/* XMSG */
+"error" = "Chyba";
+
+/* XBUT: Cancel button */
+"cancel" = "Zrušit";
+
+/* XFLD: password field */
+"password" = "Heslo";
+
+/* XMSG */
+"fail_to_load" = "Certifikát od poskytovatele nebyl načten.";
+
+/* XMSG */
+"please_input_certificate" = "Zadejte cestu k souboru certifikátu a heslo.";
+
+/* XMSG */
+"missing_file_path" = "Chybí cesta k souboru certifikátu nebo heslo, opakujte zadání.";
+
+/* XMSG */
+"certificate_not_exist" = "Certifikát neexistuje, zadejte znovu cestu k souboru a heslo.";
+
+/* XMSG */
+"password_incorrect" = "Heslo není správné, opakujte zadání.";
+
+/* XMSG */
+"fail_to_import_certificate" = "Certifikát ze souboru nebyl importován, zkontrolujte nastavení a zkuste to znovu.";
+
+/* XFLD: File name field */
+"file_name" = "Název souboru";
+

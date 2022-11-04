@@ -1,0 +1,20 @@
+{
+  "name": "@sap/kapsel-plugin-barcodescanner",
+  "version": "4.5.3",
+  "description": "Kapsel Barcode Scanner Plugin",
+  "cordova": {
+    "id": "kapsel-plugin-barcodescanner",
+    "platforms": [
+      "android",
+      "ios",
+      "windows"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-windows"
+  ],
+  "author": "Adobe PhoneGap Team & SAP SE"
+}

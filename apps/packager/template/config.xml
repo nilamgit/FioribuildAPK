@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.sap.mobile.fioripackaged" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>LocalLaunchPad</name>
+    <content src="index.html" />
+    <allow-navigation href="*" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="sapauthenticator:*" />
+
+    <hook type="after_platform_add" src="scripts/after_platform_add/configApp.js" />
+    
+    <preference name="xwalkVersion" value="23+"/>
+    <platform name="ios">
+        <preference name="Orientation" value="all" />
+        <preference name="deployment-target" value="11.0" />
+
+        <!-- iOS 7.0+ -->
+        <!-- iPhone / iPod Touch  -->
+        <icon src="res/ios/icon-60.png" width="60" height="60" />
+        <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+        <!-- iPad -->
+        <icon src="res/ios/icon-76.png" width="76" height="76" />
+        <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+        <!-- iOS 6.1 -->
+        <!-- Spotlight Icon -->
+        <icon src="res/ios/icon-40.png" width="40" height="40" />
+        <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+        <!-- iPhone / iPod Touch -->
+        <icon src="res/ios/icon.png" width="57" height="57" />
+        <icon src="res/ios/icon@2x.png" width="114" height="114" />
+        <!-- iPad -->
+        <icon src="res/ios/icon-72.png" width="72" height="72" />
+        <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
+        <!-- iPhone Spotlight and Settings Icon -->
+        <icon src="res/ios/icon-small.png" width="29" height="29" />
+        <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+        <!-- iPad Spotlight and Settings Icon -->
+        <icon src="res/ios/icon-50.png" width="50" height="50" />
+        <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+        <!-- iPad Pro Spotlight and Settings Icon -->
+        <icon src="res/ios/icon-83.5@2x.png" width="167" height="167" />
+        <!-- Marketing icon -->
+        <icon src="res/ios/icon-1024.png" width="1024" height="1024" />
+
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+        <splash src="res/screen/ios/Default-667h.png" width="750" height="1334"/>
+        <splash src="res/screen/ios/Default-736h.png" width="1242" height="2208"/>
+        <splash src="res/screen/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
+        
+        <edit-config target="NSFaceIDUsageDescription" file="*-Info.plist" mode="merge">
+               <string>App would like to access Face ID for authentication.</string>
+        </edit-config>
+
+        <!-- iOS Split View support  -->
+        <edit-config file="*-Info.plist" mode="merge" target="UIRequiresFullScreen">
+            <false />
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="UILaunchStoryboardName">
+            <string>CDVLaunchScreen</string>
+        </edit-config>
+
+        <!-- Required for certificate import -->
+        <edit-config file="*-Info.plist" mode="merge" target="LSSupportsOpeningDocumentsInPlace">
+            <false />
+        </edit-config>
+
+        <preference name="FadeSplashScreen" value="false"/>
+    	<preference name="AutoHideSplashScreen" value="true" />
+    	<preference name="SplashScreenDelay" value="0"/>
+        <preference name="StatusBarOverlaysWebView" value="false" />
+        <preference name="StatusBarStyle" value="default" />
+        <preference name="StatusBarBackgroundColor" value="#FFFFFF" />
+        <preference name="EnableViewportScale" value="true" />
+    </platform>
+    <platform name="android">
+        <allow-navigation href="*" />
+        <preference name='android-minSdkVersion' value='22' />
+        <icon src="res/android/ldpi.png" density="ldpi" />
+        <icon src="res/android/mdpi.png" density="mdpi" />
+        <icon src="res/android/hdpi.png" density="hdpi" />
+        <icon src="res/android/xhdpi.png" density="xhdpi" />
+        <icon src="res/android/xxhdpi.png" density="xxhdpi" />
+
+        <splash density="land-hdpi" src="res/screen/android/splash-land-hdpi.png" />
+        <splash density="land-ldpi" src="res/screen/android/splash-land-ldpi.png" />
+        <splash density="land-mdpi" src="res/screen/android/splash-land-mdpi.png" />
+
+        <splash density="port-hdpi" src="res/screen/android/splash-port-hdpi.png" />
+        <splash density="port-ldpi" src="res/screen/android/splash-port-ldpi.png" />
+        <splash density="port-mdpi" src="res/screen/android/splash-port-mdpi.png" />
+    </platform>
+    <plugin name="@sap/kapsel-plugin-corelibs" spec="4.5.3" />
+    <plugin name="@sap/kapsel-plugin-logon" spec="4.5.3" />
+    <plugin name="@sap/kapsel-plugin-logger" spec="4.5.3" />
+    <plugin name="@sap/kapsel-plugin-apppreferences" spec="4.5.3" />
+    <plugin name="@sap/kapsel-plugin-settings" spec="4.5.3" />
+    <plugin name="@sap/kapsel-plugin-authproxy" spec="4.5.3" />
+    <plugin name="@sap/kapsel-plugin-encryptedstorage" spec="4.5.3" />
+    <plugin name="@sap/kapsel-plugin-voicerecording" spec="4.5.3"/>
+    <plugin name="@sap/kapsel-plugin-barcodescanner" spec="4.5.3"/>
+    <plugin name="@sap/kapsel-plugin-attachmentviewer" spec="4.5.3" />
+    <plugin name="@sap/kapsel-plugin-calendar" spec="4.5.3"/>
+    <plugin name="@sap/de.appplant.cordova.plugin.printer" spec="4.5.3" />
+    <plugin name="@sap/kapsel-plugin-odata" spec="4.5.3" />
+    <plugin name="@sap/kapsel-plugin-fioriclient" spec="4.5.3" />
+    <plugin name="@sap/kapsel-plugin-multidex" spec="4.5.3" />
+    <plugin name="@sap/kapsel-plugin-appupdate" spec="4.5.3" />
+    <plugin name="@sap/cordova-plugin-statusbar" spec="4.5.3" />
+    <plugin name="cordova-plugin-whitelist" spec="1.3.3" />
+    <plugin name="cordova-plugin-camera" spec="4.0.3" />
+    <plugin name="cordova-plugin-contacts" spec="3.0.1" />
+    <plugin name="cordova-plugin-file" spec="6.0.1" />
+    <plugin name="cordova-plugin-geolocation" spec="4.0.1" />
+    <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
+    <plugin name="cordova-plugin-network-information" spec="2.0.1" />
+    <engine name="ios" spec="~6.1" />
+    <engine name="android" spec="~9.0" />
+</widget>

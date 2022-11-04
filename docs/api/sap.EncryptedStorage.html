@@ -1,0 +1,2926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Namespace: EncryptedStorage</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Namespace: EncryptedStorage</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="sap.html">sap</a>.</span>
+        
+        EncryptedStorage
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">The EncryptedStorage class is used as a secure local store.  The EncryptedStorage API is based on the
+W3C web storage API, but it is asynchronous.<br/>
+<br/>
+If the datavault managed by the Logon plugin gets deleted (eg: the user forgets their passcode), then all
+encrypted stores will also be deleted.
+<br/>
+<br/>
+<b>Adding and Removing the EncryptedStorage Plugin</b><br/>
+The EncryptedStorage plugin is added and removed using the
+<a href="http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-line%20Interface">Cordova CLI</a>.<br/>
+<br/>
+To add the EncryptedStorage plugin to your project, use the following command:<br/>
+cordova plugin add kapsel-plugin-encryptedstorage<br/>
+<br/>
+To remove the EncryptedStorage plugin from your project, use the following command:<br/>
+cordova plugin rm kapsel-plugin-encryptedstorage</div>
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="ERROR_BAD_PASSWORD"><span class="type-signature">(constant) </span>ERROR_BAD_PASSWORD<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    This error code indicates a wrong password was provided
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="ERROR_DATAVAULT_ACCESS_ERROR"><span class="type-signature">(constant) </span>ERROR_DATAVAULT_ACCESS_ERROR<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    This error indicates that the data vault access error.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="ERROR_DATAVAULT_LOCKED"><span class="type-signature">(constant) </span>ERROR_DATAVAULT_LOCKED<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    This error indicates that the datavault managed by the Logon plugin is locked.
+the Logon plugin must be in an unlocked state to use the EncryptedStorage plugin.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="ERROR_DB_ERROR"><span class="type-signature">(constant) </span>ERROR_DB_ERROR<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    This error indicates that the SQLite database error.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="ERROR_FILE_DOES_NOT_EXIST"><span class="type-signature">(constant) </span>ERROR_FILE_DOES_NOT_EXIST<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    This error indicates that the specified file does not exist.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="ERROR_INVALID_PARAMETER"><span class="type-signature">(constant) </span>ERROR_INVALID_PARAMETER<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    This error code indicates an invalid parameter was provided.
+(eg: a string given where a number was required).
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="ERROR_IO"><span class="type-signature">(constant) </span>ERROR_IO<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    This error indicates that there was an IO error reading or writing to the file.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="ERROR_UNKNOWN"><span class="type-signature">(constant) </span>ERROR_UNKNOWN<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    This error code indicates an unknown error occurred.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".deleteStore"><span class="type-signature">(static) </span>deleteStore<span class="signature">(successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Due to changes in the implementation of EncryptedStorage, calling this function
+is exactly equivalent to calling EncryptedStorage.clear.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sap.EncryptedStorage.html#~successCallback">sap.EncryptedStorage~successCallback</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If successful,
+the successCallback is invoked with no parameters.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sap.EncryptedStorage.html#~errorCallback">sap.EncryptedStorage~errorCallback</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If there is an error,
+the errorCallback is invoked with an ErrorInfo object as the parameter.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>var successCallback = function() {
+   alert("Store deleted!");
+}
+var errorCallback = function(error) {
+   alert("An error occurred: " + JSON.stringify();
+}
+ks = new sap.EncryptedStorage("storename");
+ks.deleteStore(successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="clear"><span class="type-signature"></span>clear<span class="signature">(successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    This function removes all items from the store.  If there are no
+items in the store in the first place, that is still counted as a success.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sap.EncryptedStorage.html#~successCallback">sap.EncryptedStorage~successCallback</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If successful,
+the successCallback is invoked with no parameters.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sap.EncryptedStorage.html#~errorCallback">sap.EncryptedStorage~errorCallback</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If there is an error,
+the errorCallback is invoked with an ErrorInfo object as the parameter.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>var store = new sap.EncryptedStorage("storeName");
+var successCallback = function() {
+   alert("Store cleared!");
+}
+var errorCallback = function(error) {
+   alert("An error occurred: " + JSON.stringify();
+}
+store.clear(successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="decryptFileWithStorePassword"><span class="type-signature"></span>decryptFileWithStorePassword<span class="signature">(path, outputPath, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    This function decrypts the file at the given path and writes a new decrypted file.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The path of the input file for which to decrypt. For ios, it can be file URL (starting with "file"//") or
+     file full path (starting with "/").</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>outputPath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The file path or file URL of the decrypted output file. If the parameter is set to null or empty string, then the output
+     file is saved in the same folder as input file with the last file extention removed from the input filename. If the output file
+     already exists, it will be deleted first before creating the output file. path and outputPath parameters cannot have the same value.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">sap.EncryptedStorage~decryptFileSuccessCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If successful,
+the successCallback is invoked with the path to the decrypted file (starting with "/") as the parameter</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sap.EncryptedStorage.html#~errorCallback">sap.EncryptedStorage~errorCallback</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If there is an error,
+the errorCallback is invoked with an ErrorInfo object as the parameter.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>var store = new sap.EncryptedStorage("storeName");
+var successCallback = function(decryptedFilePath) {
+   alert("Decrypted file path is " + decryptedFilePath);
+}
+var errorCallback = function(error) {
+   alert("An error occurred: " + JSON.stringify(error));
+}
+store.decryptFileWithStorePassword("encryptedFilePath", null, successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="encryptFileWithStorePassword"><span class="type-signature"></span>encryptFileWithStorePassword<span class="signature">(path, outputPath, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    This function encrypts the file at the given path and writes a new encrypted file.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The path of the input file for which to encrypt. For ios, it can be file URL (starting with "file"//") or
+     file full path (starting with "/").</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>outputPath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The file path or file URL of the encrypted output file. If the parameter is set to null or empty string, then the output file
+     is saved in the same folder as input file with ".encr" appended to the input filename. If the output file already exists, it will be
+     deleted first before creating the output file. path and outputPath parameters cannot set to the same value.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">sap.EncryptedStorage~encryptFileSuccessCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If successful,
+the successCallback is invoked with the path to the encrypted file path (starting with "/") as the parameter.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sap.EncryptedStorage.html#~errorCallback">sap.EncryptedStorage~errorCallback</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If there is an error,
+the errorCallback is invoked with an ErrorInfo object as the parameter.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>var store = new sap.EncryptedStorage("storeName");
+var successCallback = function(encryptedFilePath) {
+   alert("Encrypted file path is " + encryptedFilePath);
+}
+var errorCallback = function(error) {
+   alert("An error occurred: " + JSON.stringify(error));
+}
+store.encryptFileWithStorePassword("decryptedFilePath", null, successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getItem"><span class="type-signature"></span>getItem<span class="signature">(key, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    This function gets the value corresponding to the given key.  If there is no
+item with the given key, then the success callback is invoked with null as
+the parameter.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The key of the item for which to get the value.  If null or undefined is
+passed, "null" is used.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sap.EncryptedStorage.html#~getItemSuccessCallback">sap.EncryptedStorage~getItemSuccessCallback</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If successful,
+the successCallback is invoked with the value as the parameter (or null if the key
+did not exist).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sap.EncryptedStorage.html#~errorCallback">sap.EncryptedStorage~errorCallback</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If there is an error,
+the errorCallback is invoked with an ErrorInfo object as the parameter.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>var store = new sap.EncryptedStorage("storeName");
+var successCallback = function(value) {
+   alert("Value is " + value);
+}
+var errorCallback = function(error) {
+   alert("An error occurred: " + JSON.stringify(error));
+}
+store.getItem("theKey", successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="key"><span class="type-signature"></span>key<span class="signature">(index, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    This function gets the key corresponding to the given index.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>index</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The index of the store for which to get the key.
+Valid indices are integers from zero (the first index), up to, but not including,
+the length of the store.  If the index is out of bounds, then the success
+callback is invoked with null as the parameter.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sap.EncryptedStorage.html#~keySuccessCallback">sap.EncryptedStorage~keySuccessCallback</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If successful,
+the successCallback is invoked with the key as the parameter.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sap.EncryptedStorage.html#~errorCallback">sap.EncryptedStorage~errorCallback</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If there is an error,
+the errorCallback is invoked with an ErrorInfo object as the parameter.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// This example shows how to get the key for the last item.
+var store = new sap.EncryptedStorage("storeName");
+var errorCallback = function( error ){
+   alert("An error occurred: " + JSON.stringify(error));
+}
+var keySuccessCallback = function(key) {
+   alert("Last key is " + key);
+}
+var lengthSuccessCallback = function(length) {
+   store.key(length - 1, keySuccessCallback, errorCallback);
+}
+store.length(lengthSuccessCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="length"><span class="type-signature"></span>length<span class="signature">(successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    This function gets the length of the store.  The length of a store
+is the number of key/value pairs that are in the store.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sap.EncryptedStorage.html#~lengthSuccessCallback">sap.EncryptedStorage~lengthSuccessCallback</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If successful,
+the successCallback is invoked with the length of the store as
+the parameter.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sap.EncryptedStorage.html#~errorCallback">sap.EncryptedStorage~errorCallback</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If there is an error,
+the errorCallback is invoked with an ErrorInfo object as the parameter.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>var store = new sap.EncryptedStorage("storeName");
+var successCallback = function(length) {
+   alert("Length is " + length);
+}
+var errorCallback = function(error) {
+   alert("An error occurred: " + JSON.stringify(error));
+}
+store.length(successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="removeItem"><span class="type-signature"></span>removeItem<span class="signature">(key, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    This function removes the item corresponding to the given key.  If there is no
+item with the given key in the first place, that is still counted as a success.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The key of the item to remove.  If null or undefined is
+passed, "null" is used.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sap.EncryptedStorage.html#~successCallback">sap.EncryptedStorage~successCallback</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If successful,
+the successCallback is invoked with no parameters.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sap.EncryptedStorage.html#~errorCallback">sap.EncryptedStorage~errorCallback</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If there is an error,
+the errorCallback is invoked with an ErrorInfo object as the parameter.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>var store = new sap.EncryptedStorage("storeName");
+var successCallback = function() {
+   alert("Value removed");
+}
+var errorCallback = function(error) {
+   alert("An error occurred: " + JSON.stringify(error));
+}
+store.removeItem("somekey", successCallback, errorCallback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setItem"><span class="type-signature"></span>setItem<span class="signature">(key, value, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    This function sets an item with the given key and value.  If no item exists with
+the given key, then a new item is created.  If an item does exist with the
+the given key, then its value is overwritten with the given value.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The key of the item to set.  If null or undefined is passed,
+"null" is used.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The value of the item to set.  If null or undefined is passed,
+"null" is used.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sap.EncryptedStorage.html#~successCallback">sap.EncryptedStorage~successCallback</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If successful,
+the successCallback is invoked with no parameters.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sap.EncryptedStorage.html#~errorCallback">sap.EncryptedStorage~errorCallback</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If there is an error,
+the errorCallback is invoked with an ErrorInfo object as the parameter.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>var store = new sap.EncryptedStorage("storeName");
+var successCallback = function() {
+   alert("Item has been set.");
+}
+var errorCallback = function(error) {
+   alert("An error occurred: " + JSON.stringify(error));
+}
+store.setItem("somekey", "somevalue", successCallback, errorCallback);</code></pre>
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        
+                
+
+    
+
+    <h4 class="name" id="~errorCallback"><span class="type-signature"></span>errorCallback<span class="signature">(errorCode)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Callback function that is invoked in case of an error.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An error code indicating what went wrong.  Will be one of <a href="sap.EncryptedStorage.html#ERROR_UNKNOWN">sap.EncryptedStorage#ERROR_UNKNOWN</a>,
+<a href="sap.EncryptedStorage.html#ERROR_INVALID_PARAMETER">sap.EncryptedStorage#ERROR_INVALID_PARAMETER</a>, <a href="sap.EncryptedStorage.html#ERROR_BAD_PASSWORD">sap.EncryptedStorage#ERROR_BAD_PASSWORD</a>, <a href="sap.EncryptedStorage.html#ERROR_DATAVAULT_LOCKED">sap.EncryptedStorage#ERROR_DATAVAULT_LOCKED</a>,
+<a href="sap.EncryptedStorage.html#ERROR_DB_ERROR">sap.EncryptedStorage#ERROR_DB_ERROR</a>, or <a href="sap.EncryptedStorage.html#ERROR_DATAVAULT_ACCESS_ERROR">sap.EncryptedStorage#ERROR_DATAVAULT_ACCESS_ERROR</a>.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>function errorCallback(errCode) {
+   //Set the default error message. Used if an invalid code is passed to the
+   //function (just in case) but also to cover the
+   //sap.EncryptedStorage.ERROR_UNKNOWN case as well.
+   var msg = "Unkown Error";
+   switch (errCode) {
+      case sap.EncryptedStorage.prototype.ERROR_INVALID_PARAMETER:
+         msg = "Invalid parameter passed to method";
+         break;
+      case sap.EncryptedStorage.prototype.ERROR_DATAVAULT_LOCKED:
+         msg = "Datavault locked";
+         // If we want to we could call sap.Logon.unlock in this case.
+         break;
+   };
+   //Write the error to the log
+   console.error(msg);
+   //Let the user know what happened
+   navigator.notification.alert(msg, null, "EncryptedStorage Error", "OK");
+};</code></pre>
+
+
+
+            
+                
+
+    
+
+    <h4 class="name" id="~getItemSuccessCallback"><span class="type-signature"></span>getItemSuccessCallback<span class="signature">(value)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Callback function that is invoked on a successful call to EncryptedStorage.getItem.
+If the returned value is null, that means the key passed to EncryptedStorage.getItem did not exist.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The value of the item with the given key.  Will be null if the key passed to
+EncryptedStorage.getItem did not exist.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+    
+
+    <h4 class="name" id="~keySuccessCallback"><span class="type-signature"></span>keySuccessCallback<span class="signature">(key)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Callback function that is invoked on a successful call to EncryptedStorage.key.
+If the key returned is null that means the index passed to EncryptedStorage.key was out of bounds.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The key corresponding to the given index.  Will be null if the index passed to
+EncryptedStorage.key was out of bounds.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+    
+
+    <h4 class="name" id="~lengthSuccessCallback"><span class="type-signature"></span>lengthSuccessCallback<span class="signature">(length)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Callback function that is invoked on a successful call to EncryptedStorage.length.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>length</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The number of key/value pairs in the store.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+    
+
+    <h4 class="name" id="~successCallback"><span class="type-signature"></span>successCallback<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Callback function that is invoked on a successful call to a function that does
+not need to return anything.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="-_anonymous_-lib.createSession-CmisRequest.html">CmisRequest</a></li><li><a href="-_anonymous_-lib.createSession-session.html">session</a></li><li><a href="FileTransfer.html">FileTransfer</a></li><li><a href="FileTransferError.html">FileTransferError</a></li><li><a href="sap.AuthProxy_CertificateFromFile.html">CertificateFromFile</a></li><li><a href="sap.AuthProxy_CertificateFromLogonManager.html">CertificateFromLogonManager</a></li><li><a href="sap.AuthProxy_CertificateFromStore.html">CertificateFromStore</a></li><li><a href="sap.OfflineStore.html">OfflineStore</a></li><li><a href="sap.Usage.InfoType.html">InfoType</a></li><li><a href="sap.Usage.PrivacyPolicy.html">PrivacyPolicy</a></li></ul><h3>Events</h3><ul><li><a href="sap.AppUpdate.html#event:checking">checking</a></li><li><a href="sap.AppUpdate.html#event:downloading">downloading</a></li><li><a href="sap.AppUpdate.html#event:error">error</a></li><li><a href="sap.AppUpdate.html#event:insufficientspace">insufficientspace</a></li><li><a href="sap.AppUpdate.html#event:noupdate">noupdate</a></li><li><a href="sap.AppUpdate.html#event:progress">progress</a></li><li><a href="sap.AppUpdate.html#event:updateready">updateready</a></li><li><a href="sap.AppUpdate.html#event:updatetoolargeforcellular">updatetoolargeforcellular</a></li><li><a href="sap.CacheManager.html#event:cacheinvalidated">cacheinvalidated</a></li><li><a href="sap.CacheManager.html#event:noviewerfound">noviewerfound</a></li></ul><h3>Namespaces</h3><ul><li><a href="cordova.html">cordova</a></li><li><a href="cordova.plugins.html">plugins</a></li><li><a href="cordova.plugins.printer.html">printer</a></li><li><a href="sap.html">sap</a></li><li><a href="sap.AppPreferences.html">AppPreferences</a></li><li><a href="sap.AppSettings.html">AppSettings</a></li><li><a href="sap.AppUpdate.html">AppUpdate</a></li><li><a href="sap.AuthProxy.html">AuthProxy</a></li><li><a href="sap.AuthProxy.OAuth2.html">OAuth2</a></li><li><a href="sap.AuthProxy.OTP.html">OTP</a></li><li><a href="sap.AuthProxy.SAML2.html">SAML2</a></li><li><a href="sap.CacheManager.html">CacheManager</a></li><li><a href="sap.Consent.html">Consent</a></li><li><a href="sap.DocumentService.html">DocumentService</a></li><li><a href="sap.E2ETrace.html">E2ETrace</a></li><li><a href="sap.EncryptedStorage.html">EncryptedStorage</a></li><li><a href="sap.FioriClient.html">FioriClient</a></li><li><a href="sap.Logger.html">Logger</a></li><li><a href="sap.Logon.html">Logon</a></li><li><a href="sap.Logon.Core.html">Core</a></li><li><a href="sap.OData.html">OData</a></li><li><a href="sap.Online.html">Online</a></li><li><a href="sap.Push.html">Push</a></li><li><a href="sap.Settings.html">Settings</a></li><li><a href="sap.Toolbar.html">Toolbar</a></li><li><a href="sap.Usage.html">Usage</a></li><li><a href="sap.VoiceRecording.html">VoiceRecording</a></li></ul><h3>Interfaces</h3><ul><li><a href="sap.VoiceRecording.Recording.html">Recording</a></li></ul><h3>Global</h3><ul><li><a href="global.html#checkAgreement">checkAgreement</a></li><li><a href="global.html#checkAndOpenEulaPsDialog">checkAndOpenEulaPsDialog</a></li><li><a href="global.html#credentialCallback">credentialCallback</a></li><li><a href="global.html#defaultPsFileName">defaultPsFileName</a></li><li><a href="global.html#getURLInfo">getURLInfo</a></li><li><a href="global.html#getWwwAppDirectory">getWwwAppDirectory</a></li><li><a href="global.html#handleDenyAgreement">handleDenyAgreement</a></li><li><a href="global.html#isChinaMainland">isChinaMainland</a></li><li><a href="global.html#isNull">isNull</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#logVersionBuildTime">logVersionBuildTime</a></li><li><a href="global.html#newNullLiteral">newNullLiteral</a></li><li><a href="global.html#precheckEulaPsDialog">precheckEulaPsDialog</a></li><li><a href="global.html#presetEulaPsTitle">presetEulaPsTitle</a></li><li><a href="global.html#readAppConfigForEulaPs">readAppConfigForEulaPs</a></li><li><a href="global.html#removeAgreement">removeAgreement</a></li><li><a href="global.html#removeAgreementForUser">removeAgreementForUser</a></li><li><a href="global.html#saveAgreement">saveAgreement</a></li><li><a href="global.html#saveAgreementForUser">saveAgreementForUser</a></li><li><a href="global.html#showEulaAndPs">showEulaAndPs</a></li><li><a href="global.html#validateHTMLText">validateHTMLText</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0</a>
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

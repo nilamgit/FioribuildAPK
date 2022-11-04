@@ -1,0 +1,18 @@
+/* XTIT: Dialog title */
+"authentication_required" = "需要进行验证";
+
+/* XMSG: Dialog messge */
+"basic_auth_message" = "服务器 %@ 要求用户名和密码。";
+
+/* XBUT: ok button */
+"ok" = "确定";
+
+/* XBUT: cancel button */
+"cancel" = "取消";
+
+/* XBUT: login button */
+"login" = "登录";
+
+/* XBUT: password button */
+"password" = "密码";
+

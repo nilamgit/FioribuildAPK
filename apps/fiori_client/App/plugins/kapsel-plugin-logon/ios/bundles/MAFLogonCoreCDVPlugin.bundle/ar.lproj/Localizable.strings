@@ -1,0 +1,12 @@
+/* XTIT: Dialog title */
+"change_password" = "تم تغيير كلمة المرور.";
+
+/* XBUT: ok button */
+"ok" = "موافق";
+
+/* XMSG: password changed message */
+"change_password_reaload" = "تم تغيير كلمة المرور. ستتم إعادة تحميل الصفحة.";
+
+/* XMSG: scan fingerprint message */
+"scan_fingerprint" = "يُرجى مسح البصمة ضوئيًا لتسجيل الدخول.";
+

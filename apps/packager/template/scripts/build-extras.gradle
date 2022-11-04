@@ -1,0 +1,8 @@
+
+android {
+    // With UI5 1.71, there are folder start with sepcial character. E,g, sap/ushell/bootstrap/_SchedulingAgent.
+    // It cause the file under the folder can't be found on Android platform. Here, the 'aaptOptions' configuration was needed to fix this problem. 
+    aaptOptions {
+        ignoreAssetsPattern '!._'
+    }
+}

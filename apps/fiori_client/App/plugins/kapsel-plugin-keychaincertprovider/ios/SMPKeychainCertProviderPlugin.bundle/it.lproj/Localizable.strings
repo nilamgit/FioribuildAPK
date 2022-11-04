@@ -1,0 +1,45 @@
+/* XMSG */
+"incorrect_password" = "Password errata, ripeti inserimenti.";
+
+/* XMSG */
+"please_input" = "Inserisci la password del certificato.";
+
+/* XTIT: Dialog title */
+"import_certificate" = "Importa certificato.";
+
+/* XBUT: Ok buton */
+"ok" = "OK";
+
+/* XMSG */
+"fail_to_import" = "Certificato client (%d) non importato.";
+
+/* XMSG */
+"error" = "Errore";
+
+/* XBUT: Cancel button */
+"cancel" = "Annulla";
+
+/* XFLD: password field */
+"password" = "Password";
+
+/* XMSG */
+"fail_to_load" = "Certificato fornitore non caricato.";
+
+/* XMSG */
+"please_input_certificate" = "Inserisci percorso file e password del certificato.";
+
+/* XMSG */
+"missing_file_path" = "Percorso file e password del certificato mancanti. Ripeti inserimento.";
+
+/* XMSG */
+"certificate_not_exist" = "File certificato inesistente, reinserisci percorso file e password.";
+
+/* XMSG */
+"password_incorrect" = "Password errata, ripeti inserimento.";
+
+/* XMSG */
+"fail_to_import_certificate" = "Certificato file non importato, controlla le impostazioni e riprova.";
+
+/* XFLD: File name field */
+"file_name" = "Nome file";
+

@@ -1,0 +1,13 @@
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+// Apply values after project's build-extras.gradle
+cdvPluginPostBuildExtras.add({
+    dependencies {
+		  compile(name:'FederationProvider-3.16.24', ext:'aar')
+		  compile(name:'Federation-3.16.24', ext:'aar')
+    }
+})

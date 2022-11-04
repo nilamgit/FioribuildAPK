@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="kapsel-plugin-corelibs"
+    version="4.5.3">
+
+	<name>CoreLibs</name>
+    
+    <engines>
+      <engine name="cordova" version="&gt;=9.0.0" />
+      <engine name="cordova-android" version="&gt;=9.0.0" />
+      <engine name="cordova-ios" version="&gt;=6.1.0" />
+    </engines>
+
+	<platform name="android">
+		<lib-file src="android/libs/Common-3.16.24.aar"/>
+		<lib-file src="android/libs/ClientHubSLL-3.16.24.aar"/>
+		<lib-file src="android/libs/CoreServices-3.16.24.aar"/>
+		<lib-file src="android/libs/Request-3.16.24.aar"/>
+        <lib-file src="android/libs/DataVaultLib-3.16.24.aar"/>
+        <lib-file src="android/libs/ClientLog-3.16.24.aar"/>
+		<lib-file src="android/libs/SupportabilityFacade-3.16.24.aar"/>
+		<lib-file src="android/libs/HttpConversation-3.16.24.aar"/>
+		<lib-file src="android/libs/HttpConvAuthFlows-3.16.24.aar"/>
+		<lib-file src="android/libs/E2ETrace-3.16.24.aar"/>
+
+		<lib-file src="android/libs/sap-e2etrace-2.3.9.0.jar"/>
+		<lib-file src="android/libs/perflib-1.2.0.jar"/>
+		<lib-file src="android/libs/AfariaSLL-7.00.6169.0.jar"/>
+
+		<lib-file src="android/libs/corelibs-plugin-4.5.3.aar"/>
+
+        <framework src="android/smp_corelibs.gradle" custom="true" type="gradleReference" />
+
+        <resource-file src="android/res/values/colors.xml" target="res/values/colors.xml" />
+        <resource-file src="android/res/values/dimens.xml" target="res/values/dimens.xml" />
+        <resource-file src="android/res/values/styles.xml" target="res/values/styles.xml" />
+
+        <resource-file src="android/res/xml/kapsel_network_security_config.xml" target="res/xml/kapsel_network_security_config.xml" />
+
+        <hook type="after_prepare" src="hooks/after_prepare/applyConfig.js"/>
+	</platform>
+	<platform name="ios">
+		<framework src="libz.dylib"/>
+        <framework src="libc++.dylib"/>
+		<framework src="libsqlite3.dylib"/>
+		<framework src="Security.framework"/>
+		<framework src="MessageUI.framework"/>
+		<framework src="CFNetwork.framework"/>
+		<framework src="SystemConfiguration.framework"/>
+        <framework src="CoreData.framework"/>
+        <framework src="LocalAuthentication.framework"/>
+        <framework src="WebKit.framework" weak="true" />
+        <!-- SQLCipher must be present before libsqlite3 to avoid a crash.  Cordova binary links source files before frameworks -->
+        <source-file framework="true" src="ios/libs/libsqlcipher.a"/>
+		<source-file framework="true" src="ios/libs/libConnectivity.a"/>
+		<source-file framework="true" src="ios/libs/libRequest.a"/>
+		<source-file framework="true" src="ios/libs/libE2ETrace.a"/>
+		<source-file framework="true" src="ios/libs/libCoreServices.a"/>
+		<source-file framework="true" src="ios/libs/libClientHubSLL.a"/>
+		<source-file framework="true" src="ios/libs/libLogger.a"/>
+        <source-file framework="true" src="ios/libs/libHttpConversation.a"/>
+        <source-file framework="true" src="ios/libs/libHttpConvAuthFlows.a"/>
+        <source-file framework="true" src="ios/libs/libUserInteractionMultiplexer.a"/>
+
+        <source-file framework="true" src="ios/libs/libSupportability.a"/>
+        <source-file framework="true" src="ios/libs/libClientLog.a"/>
+        <source-file framework="true" src="ios/libs/libE2ETrace2.a"/>
+
+		<source-file framework="true" src="ios/libs/libAfariaSLL.a"/>
+		<source-file framework="true" src="ios/libs/libDatavault.a"/>
+		<source-file framework="true" src="ios/libs/libPerformanceLib.a"/>
+		<source-file framework="true" src="ios/libs/libSMPCoreLib.a"/>
+        <source-file framework="true" src="ios/libs/libcrypto.a"/>
+        
+        <resource-file src="ios/bundles/UserInteractionMultiplexer.bundle" />
+        
+        <hook type="after_plugin_install" src="ios/hooks/disable_bitcode.js"/>
+        <hook type="after_platform_add" src="ios/hooks/disable_bitcode.js"/>
+		<hook type="after_plugin_install" src="ios/hooks/applyConfig.js"/>
+	</platform>
+</plugin>

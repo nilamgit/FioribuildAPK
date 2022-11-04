@@ -1,0 +1,45 @@
+/* XMSG */
+"incorrect_password" = "Feil passord, oppgi passordet på nytt.";
+
+/* XMSG */
+"please_input" = "Oppgi passord for sertifikat.";
+
+/* XTIT: Dialog title */
+"import_certificate" = "Importer sertifikat.";
+
+/* XBUT: Ok buton */
+"ok" = "OK";
+
+/* XMSG */
+"fail_to_import" = "Klientsertifikat (%d) er ikke importert.";
+
+/* XMSG */
+"error" = "Feil";
+
+/* XBUT: Cancel button */
+"cancel" = "Avbryt";
+
+/* XFLD: password field */
+"password" = "Passord";
+
+/* XMSG */
+"fail_to_load" = "Sertifikat fra leverandør ble ikke lastet.";
+
+/* XMSG */
+"please_input_certificate" = "Oppgi filbane og passord for sertifikat.";
+
+/* XMSG */
+"missing_file_path" = "Filbane eller passord for sertifikat mangler, oppgi på nytt.";
+
+/* XMSG */
+"certificate_not_exist" = "Sertifikatfil finnes ikke, oppgi filbane og passord på nytt.";
+
+/* XMSG */
+"password_incorrect" = "Passord er feil, oppgi på nytt.";
+
+/* XMSG */
+"fail_to_import_certificate" = "Sertifikat fra fil er ikke importert, kontroller innstillingene og prøv på nytt.";
+
+/* XFLD: File name field */
+"file_name" = "Filnavn";
+

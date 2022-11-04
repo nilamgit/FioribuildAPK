@@ -1,0 +1,18 @@
+/* XTIT: Dialog title */
+"authentication_required" = "Autenticazione richiesta";
+
+/* XMSG: Dialog messge */
+"basic_auth_message" = "Il server %@ richiede un nome utente e una password.";
+
+/* XBUT: ok button */
+"ok" = "OK";
+
+/* XBUT: cancel button */
+"cancel" = "Interrompi";
+
+/* XBUT: login button */
+"login" = "Login";
+
+/* XBUT: password button */
+"password" = "Password";
+

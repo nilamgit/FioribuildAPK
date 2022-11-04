@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+    id="kapsel-plugin-consent"
+    version="4.5.3">
+
+  <name>Consent</name>
+
+  <engines>
+    <engine name="cordova" version="&gt;=9.0.0" />
+    <engine name="cordova-android" version="&gt;=9.0.0" />
+  </engines>
+
+  <dependency id="@sap/kapsel-plugin-apppreferences" version="4.5.3"/>
+  <dependency id="@sap/kapsel-plugin-i18n" version="4.5.3"/>
+  <dependency id="cordova-plugin-device"/>
+  <dependency id="cordova-plugin-dialogs"/>
+  <dependency id="cordova-plugin-file"/>
+
+  <platform name="android">
+    <js-module src="www/Consent.js" name="Consent">
+      <clobbers target="sap.Consent"/>
+    </js-module>
+
+    <asset target="plugins/kapsel-plugin-consent/www/messages.properties" src="www/messages.properties"/>
+    <asset target="plugins/kapsel-plugin-consent/www/messages_cs.properties" src="www/messages_cs.properties"/>
+    <asset target="plugins/kapsel-plugin-consent/www/messages_it.properties" src="www/messages_it.properties"/>
+    <asset target="plugins/kapsel-plugin-consent/www/messages_nb.properties" src="www/messages_nb.properties"/>
+    <asset target="plugins/kapsel-plugin-consent/www/messages_en.properties" src="www/messages_en.properties"/>
+    <asset target="plugins/kapsel-plugin-consent/www/messages_ar.properties" src="www/messages_ar.properties"/>
+    <asset target="plugins/kapsel-plugin-consent/www/messages_de.properties" src="www/messages_de.properties"/>
+    <asset target="plugins/kapsel-plugin-consent/www/messages_es.properties" src="www/messages_es.properties"/>
+    <asset target="plugins/kapsel-plugin-consent/www/messages_fr.properties" src="www/messages_fr.properties"/>
+    <asset target="plugins/kapsel-plugin-consent/www/messages_ja.properties" src="www/messages_ja.properties"/>
+    <asset target="plugins/kapsel-plugin-consent/www/messages_pt.properties" src="www/messages_pt.properties"/>
+    <asset target="plugins/kapsel-plugin-consent/www/messages_ru.properties" src="www/messages_ru.properties"/>
+    <asset target="plugins/kapsel-plugin-consent/www/messages_zh_CN.properties" src="www/messages_zh_CN.properties"/>
+    <asset target="plugins/kapsel-plugin-consent/www/messages_hu.properties" src="www/messages_hu.properties"/>
+    <asset target="plugins/kapsel-plugin-consent/www/messages_pl.properties" src="www/messages_pl.properties"/>
+  </platform>
+</plugin>

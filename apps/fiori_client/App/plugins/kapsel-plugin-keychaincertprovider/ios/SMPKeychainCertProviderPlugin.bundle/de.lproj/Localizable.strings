@@ -1,0 +1,45 @@
+/* XMSG */
+"incorrect_password" = "Fehlerhaftes Kennwort, bitte erneut eingeben.";
+
+/* XMSG */
+"please_input" = "Geben Sie Ihr Zertifikatskennwort ein.";
+
+/* XTIT: Dialog title */
+"import_certificate" = "Zertifikat importieren.";
+
+/* XBUT: Ok buton */
+"ok" = "OK";
+
+/* XMSG */
+"fail_to_import" = "Client-Zertifikat (%d) nicht importiert.";
+
+/* XMSG */
+"error" = "Fehler";
+
+/* XBUT: Cancel button */
+"cancel" = "Abbrechen";
+
+/* XFLD: password field */
+"password" = "Kennwort";
+
+/* XMSG */
+"fail_to_load" = "Zertifikat von Anbieter nicht geladen.";
+
+/* XMSG */
+"please_input_certificate" = "Bitte geben Sie den Pfad zur Zertifikatsdatei und das Kennwort ein.";
+
+/* XMSG */
+"missing_file_path" = "Pfad zur Zertifikatsdatei oder Kennwort fehlt, bitte erneut eingeben.";
+
+/* XMSG */
+"certificate_not_exist" = "Zertifikatsdatei nicht vorhanden, bitte Dateipfad und Kennwort erneut eingeben.";
+
+/* XMSG */
+"password_incorrect" = "Fehlerhaftes Kennwort, bitte erneut eingeben.";
+
+/* XMSG */
+"fail_to_import_certificate" = "Zertifikat aus der Datei wurde nicht importiert, bitte Einstellungen überprüfen und erneut versuchen.";
+
+/* XFLD: File name field */
+"file_name" = "Dateiname";
+

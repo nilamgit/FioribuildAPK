@@ -1,0 +1,20 @@
+{
+  "name": "@sap/kapsel-plugin-toolbar",
+  "version": "4.5.3",
+  "description": "Kapsel Toolbar Plugin",
+  "cordova": {
+    "id": "kapsel-plugin-toolbar",
+    "platforms": [
+      "android",
+      "ios",
+      "windows"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-windows"
+  ],
+  "author": "SAP SE"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@sap/kapsel-plugin-i18n",
+  "version": "4.5.3",
+  "description": "Kapsel i18n Plugin",
+  "cordova": {
+    "id": "kapsel-plugin-i18n",
+    "platforms": [
+      "android",
+      "ios",
+      "windows"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-windows"
+  ],
+  "author": "SAP SE"
+}

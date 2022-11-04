@@ -1,0 +1,12 @@
+/* XTIT: Dialog title */
+"change_password" = "Heslo bylo změněno";
+
+/* XBUT: ok button */
+"ok" = "OK";
+
+/* XMSG: password changed message */
+"change_password_reaload" = "Heslo bylo změněno. Stránka se znovu načte.";
+
+/* XMSG: scan fingerprint message */
+"scan_fingerprint" = "Naskenujte otisk prstu k přihlášení.";
+

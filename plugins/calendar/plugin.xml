@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="kapsel-plugin-calendar"
+    version="4.5.3">
+
+    <name>Calendar</name>
+
+    <engines>
+      <engine name="cordova" version="&gt;=9.0.0" />
+      <engine name="cordova-android" version="&gt;=9.0.0" />
+      <engine name="cordova-ios" version="&gt;=6.1.0" />
+    </engines>
+
+   <description>
+     This plugin allows allows you to manipulate the native calendar. / Doc URL: https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin/blob/master/README.md
+   </description>
+
+   <author>Eddy Verbruggen</author>
+
+   <license>MIT</license>
+
+    <dependency id="@sap/kapsel-plugin-corelibs" version="4.5.3"/>
+    
+    <js-module name="Calendar" src="www/calendar.js">
+        <clobbers target="Calendar"/>
+    </js-module>
+
+    <!-- ios -->
+   <platform name="ios">
+      <config-file target="config.xml" parent="/*">
+         <feature name="Calendar">
+            <param name="ios-package" value="SMPCalendarPlugin" />
+         </feature>
+      </config-file>
+      <source-file src="ios/libs/libSMPCalendarPlugin.a" framework="true"/>
+      <framework src="EventKit.framework" />
+      <framework src="EventKitUI.framework" />
+   </platform>
+   
+   <!-- android -->
+   <platform name="android">
+      <config-file target="res/xml/config.xml" parent="/*">
+         <feature name="Calendar">
+            <param name="android-package" value="com.sap.mp.cordova.plugins.calendar.Calendar" />
+         </feature>
+      </config-file>
+     <config-file target="AndroidManifest.xml" parent="/*">
+       <uses-permission android:name="android.permission.READ_CALENDAR"/>
+       <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+     </config-file>
+     <lib-file src="android/libs/calendar-plugin-4.5.3.aar"/> 
+     <framework src="android/smp_calendar.gradle" custom="true" type="gradleReference" />
+   </platform>
+
+</plugin>

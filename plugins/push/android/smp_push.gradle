@@ -1,0 +1,35 @@
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+buildscript {
+    repositories {
+            maven { url "https://maven.google.com" }
+            jcenter()
+            mavenLocal()
+        }
+    dependencies {
+        classpath 'com.google.gms:google-services:4.2.0'
+        classpath 'com.google.code.gson:gson:2.8.5'
+        classpath 'com.google.guava:guava:25.1-jre'
+    }
+}
+ dependencies {
+        compile 'com.google.firebase:firebase-messaging:17.5.0'
+        compile 'com.google.android.gms:play-services-identity:16.0.0'
+ }
+
+
+// Apply values after project's build-extras.gradle
+cdvPluginPostBuildExtras.add({
+    dependencies {
+        compile(name:'push-plugin-4.5.3', ext:'aar')
+    }
+})
+
+// apply plugin: 'com.google.gms.google-services'
+// class must be used instead of id(string) to be able to apply plugin from non-root gradle file
+apply plugin: com.google.gms.googleservices.GoogleServicesPlugin
+

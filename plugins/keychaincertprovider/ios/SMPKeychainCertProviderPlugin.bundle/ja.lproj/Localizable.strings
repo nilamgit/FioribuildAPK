@@ -1,0 +1,45 @@
+/* XMSG */
+"incorrect_password" = "パスワードが正しくありません。再入力してください。";
+
+/* XMSG */
+"please_input" = "証明書パスワードを入力してください。";
+
+/* XTIT: Dialog title */
+"import_certificate" = "証明書をインポートします。";
+
+/* XBUT: Ok buton */
+"ok" = "OK";
+
+/* XMSG */
+"fail_to_import" = "クライアント証明書 (%d) がインポートされていません。";
+
+/* XMSG */
+"error" = "エラー";
+
+/* XBUT: Cancel button */
+"cancel" = "中止";
+
+/* XFLD: password field */
+"password" = "パスワード";
+
+/* XMSG */
+"fail_to_load" = "プロバイダからの証明書がロードされていません。";
+
+/* XMSG */
+"please_input_certificate" = "証明書のファイルパスおよびパスワードを入力してください。";
+
+/* XMSG */
+"missing_file_path" = "証明書のファイルパスまたはパスワードがありません。再入力してください。";
+
+/* XMSG */
+"certificate_not_exist" = "証明書ファイルが存在しません。ファイルパスおよびパスワードを再入力してください。";
+
+/* XMSG */
+"password_incorrect" = "パスワードが正しくありません。再入力してください。";
+
+/* XMSG */
+"fail_to_import_certificate" = "ファイルからの証明書がインポートされていません。設定をチェックして再試行してください。";
+
+/* XFLD: File name field */
+"file_name" = "ファイル名";
+

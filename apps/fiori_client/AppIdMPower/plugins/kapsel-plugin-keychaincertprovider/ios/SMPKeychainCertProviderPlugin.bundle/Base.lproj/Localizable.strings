@@ -1,0 +1,44 @@
+/* XMSG */
+"incorrect_password" = "Incorrect password. Please input certificate password again.";
+
+/* XMSG */
+"please_input" = "Please input certificate password";
+
+/* XTIT: Dialog title */
+"import_certificate" = "Import Certificate";
+
+/* XBUT: Ok buton */
+"ok" = "OK";
+
+/* XMSG */
+"fail_to_import" = "Fail to import client certificate (%d).";
+
+/* XMSG */
+"error" = "Error";
+
+/* XBUT: Cancel button */
+"cancel" = "Cancel";
+
+/* XFLD: password field */
+"password" = "Password";
+
+/* XMSG */
+"fail_to_load" = "Fail to load client certificate from provider.";
+
+/* XMSG */
+"please_input_certificate" = "Please input certificate file path and password.";
+
+/* XMSG */
+"missing_file_path" = "Missing file path or password, please input certificate file path and password again.";
+
+/* XMSG */
+"certificate_not_exist" = "Certificate file does not exist, please input certificate file path and password again.";
+
+/* XMSG */
+"password_incorrect" = "Password incorrect, please input certificate file path and password again.";
+
+/* XMSG */
+"fail_to_import_certificate" = "Fail to import certificate from file, please check the settings and try again.";
+
+/* XFLD: File name field */
+"file_name" = "File name";

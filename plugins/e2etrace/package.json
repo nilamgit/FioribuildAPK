@@ -1,0 +1,20 @@
+{
+  "name": "@sap/kapsel-plugin-e2etrace",
+  "version": "4.5.3",
+  "description": "Kapsel E2E Trace Plugin",
+  "cordova": {
+    "id": "kapsel-plugin-e2etrace",
+    "platforms": [
+      "android",
+      "ios",
+      "windows"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-windows"
+  ],
+  "author": "SAP SE"
+}

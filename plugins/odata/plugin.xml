@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="kapsel-plugin-odata"
+    version="4.5.3">
+
+    <name>OData</name>
+
+    <description>Provides offline OData support to Hybrid SDK (Kapsel) applications. / Doc URL: https://uacp2.hana.ondemand.com/doc/d9c75eebcfa840c8a4aa4b0e6a8136de/3.0.14/en-US/ed65d7f0acbd4ae2bb4bb59e0aa389ad.html</description>
+
+    <author>SAP SE</author>
+
+    <license>SAP Mobile Platform SDK "License Agreement"</license>    
+
+    <engines>
+      <engine name="cordova" version="&gt;=9.0.0" />
+      <engine name="cordova-android" version="&gt;=9.0.0" />
+      <engine name="cordova-ios" version="&gt;=6.1.0" />
+      <engine name="cordova-windows" version="&gt;=6.0.0" />
+    </engines>
+
+    <dependency id="@sap/kapsel-plugin-corelibs" version="4.5.3"/>
+    <dependency id="@sap/kapsel-plugin-authproxy" version="4.5.3"/>
+    
+    <js-module src="www/OData.js" name="OData">
+        <clobbers target="window.sap.OData"/>
+    </js-module>
+    <js-module src="www/OfflineStore.js" name="OfflineStore">
+        <clobbers target="window.sap.OfflineStore"/>
+    </js-module>
+    <platform name="android">
+        <lib-file src="android/libs/ODataAPI-3.16.24.aar" />
+        <lib-file src="android/libs/ODataOffline-4.1.15.aar" />
+        <lib-file src="android/libs/odata-plugin-4.5.3.aar" />
+        <!-- Not neccessary any more since all dynamic libraries are included in .aar file
+        <source-file target-dir="app/src/main/jniLibs/armeabi-v7a/" src="android/libs/armeabi-v7a/libodataofflinejni.so" />
+        <source-file target-dir="app/src/main/jniLibs/armeabi-v7a/" src="android/libs/armeabi-v7a/libmlcrsa17.so" />
+        <source-file target-dir="app/src/main/jniLibs/x86/" src="android/libs/x86/libodataofflinejni.so" />
+        <source-file target-dir="app/src/main/jniLibs/x86/" src="android/libs/x86/libmlcrsa17.so" /> -->
+
+        <framework src="android/smp_odata.gradle" custom="true" type="gradleReference" />
+        <framework src="cz.msebera.android:httpclient:4.4.1.1" />
+        
+        <config-file target="res/xml/config.xml" parent="/widget">
+            <feature name="OData">
+        		<param name="android-package" value="com.sap.mp.cordova.plugins.odata.OData"/>
+        	</feature>
+        </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+        <service
+            android:name="com.sap.mp.cordova.plugins.odata.RefreshIntentService"
+            android:exported="false" />
+        </config-file>
+    </platform>
+    <platform name="ios">
+        <dependency id="@sap/kapsel-plugin-xhook" version="4.5.3"/>
+		<config-file target="config.xml" parent="/widget">
+            <feature name="OData">
+                <param name="ios-package" value="SMPODataPlugin" />
+            </feature>
+		</config-file>
+        
+        <source-file framework="true" src="ios/libs/libODataAPI.a"/>
+        <source-file framework="true" src="ios/libs/libODataOffline.a"/>
+        <source-file framework="true" src="ios/libs/libSMPODataPlugin.a"/>
+    </platform>
+   <platform name="windows">
+		<dependency id="@sap/kapsel-plugin-xhook" version="4.5.3"/>
+		<js-module name="odata_proxy_win" src="windows/src/odata_proxy_win.js">
+			<merges target="odata_proxy_win"/>
+        </js-module>
+		<js-module name="MimeTypes" src="windows/src/mimetypes.js">
+			<merges target="MimeTypes" />
+		</js-module>
+		<js-module name="MimeExtensionHandler" src="windows/src/mimeExtensions.js">
+			<clobbers target="sap.MimeExtensionHandler" />
+		</js-module>
+		
+		<!-- WIN 10 -->
+		<resource-file src="windows/windows10/ARM/SAP.CoreLibs.dll" target="plugins\kapsel-plugin-odata\windows10\ARM\SAP.CoreLibs.dll" versions="&gt;8.1" arch="ARM" reference="true"/>
+		<resource-file src="windows/windows10/ARM/SAP.Data.OData.dll" target="plugins\kapsel-plugin-odata\windows10\ARM\SAP.Data.OData.dll" versions="&gt;8.1" arch="ARM" reference="true"/>
+		<resource-file src="windows/windows10/ARM/SAP.Net.Http.dll" target="plugins\kapsel-plugin-odata\windows10\ARM\SAP.Net.Http.dll" versions="&gt;8.1" arch="ARM" reference="true"/>
+		<resource-file src="windows/windows10/ARM/SAP.Data.OData.Offline.Store.dll" target="plugins\kapsel-plugin-odata\windows10\ARM\SAP.Data.OData.Offline.Store.dll" versions="&gt;8.1" arch="ARM" reference="true"/>
+
+		<framework src="windows/windows10/ARM/SAP.Supportability.winmd" target-dir="windows10/ARM" versions="&gt;8.1" arch="ARM" reference="true"/>
+		<framework src="windows/windows10/ARM/SAP.ODataOffline.winmd" target-dir="windows10/ARM" versions="&gt;8.1" arch="ARM"/>
+
+		<resource-file src="windows/windows10/x64/SAP.CoreLibs.dll" target="plugins\kapsel-plugin-odata\windows10\x64\SAP.CoreLibs.dll" versions="&gt;8.1" arch="x64" reference="true"/>
+		<resource-file src="windows/windows10/x64/SAP.Data.OData.dll" target="plugins\kapsel-plugin-odata\windows10\x64\SAP.Data.OData.dll" versions="&gt;8.1" arch="x64" reference="true"/>
+		<resource-file src="windows/windows10/x64/SAP.Net.Http.dll" target="plugins\kapsel-plugin-odata\windows10\x64\SAP.Net.Http.dll" versions="&gt;8.1" arch="x64" reference="true"/>
+		<resource-file src="windows/windows10/x64/SAP.Data.OData.Offline.Store.dll" target="plugins\kapsel-plugin-odata\windows10\x64\SAP.Data.OData.Offline.Store.dll" versions="&gt;8.1" arch="x64" reference="true"/>
+
+		<framework src="windows/windows10/x64/SAP.Supportability.winmd" target-dir="windows10/x64" versions="&gt;8.1" arch="x64" reference="true"/>
+		<framework src="windows/windows10/x64/SAP.ODataOffline.winmd" target-dir="windows10/x64" versions="&gt;8.1" arch="x64"/>
+
+		<resource-file src="windows/windows10/x86/SAP.CoreLibs.dll" target="plugins\kapsel-plugin-odata\windows10\x86\SAP.CoreLibs.dll" versions="&gt;8.1" arch="x86" reference="true"/>
+		<resource-file src="windows/windows10/x86/SAP.Data.OData.dll" target="plugins\kapsel-plugin-odata\windows10\x86\SAP.Data.OData.dll" versions="&gt;8.1" arch="x86" reference="true"/>
+		<resource-file src="windows/windows10/x86/SAP.Net.Http.dll" target="plugins\kapsel-plugin-odata\windows10\x86\SAP.Net.Http.dll" versions="&gt;8.1" arch="x86" reference="true"/>
+		<resource-file src="windows/windows10/x86/SAP.Data.OData.Offline.Store.dll" target="plugins\kapsel-plugin-odata\windows10\x86\SAP.Data.OData.Offline.Store.dll" versions="&gt;8.1" arch="x86" reference="true"/>
+
+		<framework src="windows/windows10/x86/SAP.Supportability.winmd" target-dir="windows10/x86" versions="&gt;8.1" arch="x86" reference="true"/>
+		<framework src="windows/windows10/x86/SAP.ODataOffline.winmd" target-dir="windows10/x86" versions="&gt;8.1" arch="x86"/>
+		
+		<lib-file src="Microsoft.VCLibs, Version=14.0" target="all"/>
+	</platform>
+
+</plugin>

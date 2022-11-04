@@ -1,0 +1,16 @@
+{
+  "name": "@sap/kapsel-plugin-keychaincertprovider",
+  "version": "4.5.3",
+  "description": "ios keychain Certificate Provider",
+  "cordova": {
+    "id": "kapsel-plugin-keychaincertprovider",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "SAP SE"
+}

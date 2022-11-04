@@ -1,0 +1,12 @@
+/* XTIT: Dialog title */
+"change_password" = "密码已更改。";
+
+/* XBUT: ok button */
+"ok" = "确定";
+
+/* XMSG: password changed message */
+"change_password_reaload" = "密码已更改。将重新加载页面。";
+
+/* XMSG: scan fingerprint message */
+"scan_fingerprint" = "请扫描指纹进行登录。";
+

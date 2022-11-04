@@ -1,0 +1,45 @@
+/* XMSG */
+"incorrect_password" = "Helytelen jelszó, adja meg újra.";
+
+/* XMSG */
+"please_input" = "Adja meg a tanúsítvány jelszavát.";
+
+/* XTIT: Dialog title */
+"import_certificate" = "Tanúsítvány importálása.";
+
+/* XBUT: Ok buton */
+"ok" = "OK";
+
+/* XMSG */
+"fail_to_import" = "A klienstanúsítvány (%d) nincs importálva.";
+
+/* XMSG */
+"error" = "Hiba";
+
+/* XBUT: Cancel button */
+"cancel" = "Mégse";
+
+/* XFLD: password field */
+"password" = "Jelszó";
+
+/* XMSG */
+"fail_to_load" = "A szolgáltató tanúsítványa nincs betöltve.";
+
+/* XMSG */
+"please_input_certificate" = "Adja meg a tanúsítványfájl elérési útját és jelszavát.";
+
+/* XMSG */
+"missing_file_path" = "Hiányzik a tanúsítványfájl elérési útja vagy jelszava; adja meg újra.";
+
+/* XMSG */
+"certificate_not_exist" = "A tanúsítványfájl nem létezik. Adja meg újra az elérési utat és a jelszót.";
+
+/* XMSG */
+"password_incorrect" = "A jelszó helytelen, adja meg újra.";
+
+/* XMSG */
+"fail_to_import_certificate" = "A tanúsítvány nincs importálva a fájlból; ellenőrizze a beállításokat, és próbálja újra.";
+
+/* XFLD: File name field */
+"file_name" = "Fájlnév";
+

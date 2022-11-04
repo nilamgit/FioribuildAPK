@@ -1,0 +1,12 @@
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+// Apply values after project's build-extras.gradle
+cdvPluginPostBuildExtras.add({
+    dependencies {
+        compile(name:'encryptedstorage-plugin-4.5.3', ext:'aar')
+    }
+})

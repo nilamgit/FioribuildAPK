@@ -1,0 +1,2615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Global</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Global</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="checkAgreement"><span class="type-signature"></span>checkAgreement<span class="signature">(eulaVersion, psVersion, deviceUserId)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Check the agreement record to see if user has accepted already.
+
+Return a Promise with following object as resolve argument:
+{
+    "agreementOfApp": {boolean},
+    "agreementOfUser": {
+        "anybody": {boolean},
+        "thisUser": {boolean}
+    }
+}
+
+"agreementOfApp" - agreement of application level. This is true if user accepts the agreement in the initial popup dialog.
+"agreementOfUser" - agreement of user level. Used by multi-users scenario.
+"anybody" - This is true if at least one user has accepted agreement.
+"thisUser" - This is true if the user of deviceUserId has accepted agreement.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>eulaVersion</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">EULA version to check with</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>psVersion</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Privacy Statement version to check with</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>deviceUserId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Use this argument to check agreement for a given user.
+                               It is used in multiple users scenario</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="checkAndOpenEulaPsDialog"><span class="type-signature"></span>checkAndOpenEulaPsDialog<span class="signature">(forRegNewUser<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Check and open EULA and Privacy Statement dialog. If end user has not accepted agreement, then FC will
+pop-up the EULA and PS dialog.
+For China region, the pop-up dialog includes both EULA and PS; for other regions, only includes
+EULA.
+
+Returns a Promise with an oEvent parameter in callback:
+{
+    "accept": {boolean} // indicates if end user accepts the agreement
+}
+
+Note: Windows doesn't support this function.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>forRegNewUser</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">set true for register new user. It will ignore the agreement record checking
+and to force display the pop-up dialog.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="credentialCallback"><span class="type-signature"></span>credentialCallback<span class="signature">(credential)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Handle the callback from SAP Authenticator
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>credential</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">URL parameter</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="defaultPsFileName"><span class="type-signature"></span>defaultPsFileName<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns the default Privacy Statement file name.
+return "privacy-statement.html"
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getURLInfo"><span class="type-signature"></span>getURLInfo<span class="signature">(url)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Breaks the URL into its components
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The URL to parse</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getWwwAppDirectory"><span class="type-signature"></span>getWwwAppDirectory<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    returns the www/ directory where the application is installed.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="handleDenyAgreement"><span class="type-signature"></span>handleDenyAgreement<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    End user denies the EULA and PS agreement. Exit FC on Android, or show warning message on iOS.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="isChinaMainland"><span class="type-signature"></span>isChinaMainland<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Check China Mainland by time zone
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="isNull"><span class="type-signature"></span>isNull<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    return true if value is null, undefined or "null".
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="log"><span class="type-signature"></span>log<span class="signature">(The)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Logs a string.  Will use the Logon plugin's log function if available.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>The</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">string to log.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="logVersionBuildTime"><span class="type-signature"></span>logVersionBuildTime<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Log the Kapsel SDK version and the Build timestamp. With this info, we can verify that
+if the Fiori Client picks up the correct Kapsel SDK version. The logs will
+be printed during the onDeviceReady event handler, so to see the logs, need
+to change the log level to INFO, then close and restart Fiori Client.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="newNullLiteral"><span class="type-signature"></span>newNullLiteral<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    return a "null" literal
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="precheckEulaPsDialog"><span class="type-signature"></span>precheckEulaPsDialog<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    precheck before showing EulaPs Dialog. Return true if it is OK to show dialog, false to skip dialog.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="presetEulaPsTitle"><span class="type-signature"></span>presetEulaPsTitle<span class="signature">(eulaPsConfig)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    preset EulaPs dialog title and message. Returns an object:
+{
+     title: dialog title
+     message: dialog message
+}
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>eulaPsConfig</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">configuration for EULA and PS</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="readAppConfigForEulaPs"><span class="type-signature"></span>readAppConfigForEulaPs<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Reading appConfig.js and return an object:
+{
+    eulaVersion: EULA document version.
+    psVersion: Privacy Statement document version.
+    skipPsRegionChecking: set true to skip checking China mainland region and always show Privacy Statement.
+    enablePrivacyStatement: set true to show privacy statement.
+    eulaHyperlink: url to customized EULA document.
+    psHyperlink: url to customized Privacy Statement document.
+    eulaMsg: customized message on EULA pop-up dialog.
+    eulaAndPsMsg: customized message on EULA and Privacy Statement pop-up dialog.
+}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="removeAgreement"><span class="type-signature"></span>removeAgreement<span class="signature">(oEvent)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Remove the EULA and PS agreement record from AppPreferences.
+Returns a Promise with oEvent as resolve argument.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>oEvent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">this object will be passed out to the returned Promise.resolve.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="removeAgreementForUser"><span class="type-signature"></span>removeAgreementForUser<span class="signature">(oEvent, deviceUserId, anybody)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Remove the EULA and PS agreement for a given user only.
+Returns a Promise with oEvent as resolve argument.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>oEvent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">this object will be passed out to the returned Promise.resolve.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>deviceUserId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the device user ID of the agreement</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>anybody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">set true to remove agreement for anybody too.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="saveAgreement"><span class="type-signature"></span>saveAgreement<span class="signature">(oEvent, eulaVersion, psVersion, deviceUserId, anybody)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Save the EULA and PS agreement record in AppPreferences.
+
+Returns a Promise with oEvent as resolve argument.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>oEvent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">this object will be passed out to the returned Promise.resolve.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>eulaVersion</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">EULA version to be accepted</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>psVersion</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Privacy Statement version to be accepted</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>deviceUserId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Use this argument to save agreement for a given user.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>anybody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">set true to save agreement for anybody</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="saveAgreementForUser"><span class="type-signature"></span>saveAgreementForUser<span class="signature">(deviceUserId)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Save the EULA and PS agreement record in AppPreferences.
+
+Returns a Promise.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>deviceUserId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">save agreement for this given user.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="showEulaAndPs"><span class="type-signature"></span>showEulaAndPs<span class="signature">(title<span class="signature-attributes">opt</span>, message<span class="signature-attributes">opt</span>, bFullScreen<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    pop-up EULA and PS dialog. Returns a Promise with oEvent parameter in callback:
+{
+    "accept": {boolean} // indicates if end user accepts the agreement
+}
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">dialog title</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">dialog message</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bFullScreen</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Determines if the dialog will be displayed in full screen.
+Default value is false.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="validateHTMLText"><span class="type-signature"></span>validateHTMLText<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Validate the text to prevent javascript injection.
+The text should not contain characters: "<>",
+or "javascript:"
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="-_anonymous_-lib.createSession-CmisRequest.html">CmisRequest</a></li><li><a href="-_anonymous_-lib.createSession-session.html">session</a></li><li><a href="FileTransfer.html">FileTransfer</a></li><li><a href="FileTransferError.html">FileTransferError</a></li><li><a href="sap.AuthProxy_CertificateFromFile.html">CertificateFromFile</a></li><li><a href="sap.AuthProxy_CertificateFromLogonManager.html">CertificateFromLogonManager</a></li><li><a href="sap.AuthProxy_CertificateFromStore.html">CertificateFromStore</a></li><li><a href="sap.OfflineStore.html">OfflineStore</a></li><li><a href="sap.Usage.InfoType.html">InfoType</a></li><li><a href="sap.Usage.PrivacyPolicy.html">PrivacyPolicy</a></li></ul><h3>Events</h3><ul><li><a href="sap.AppUpdate.html#event:checking">checking</a></li><li><a href="sap.AppUpdate.html#event:downloading">downloading</a></li><li><a href="sap.AppUpdate.html#event:error">error</a></li><li><a href="sap.AppUpdate.html#event:insufficientspace">insufficientspace</a></li><li><a href="sap.AppUpdate.html#event:noupdate">noupdate</a></li><li><a href="sap.AppUpdate.html#event:progress">progress</a></li><li><a href="sap.AppUpdate.html#event:updateready">updateready</a></li><li><a href="sap.AppUpdate.html#event:updatetoolargeforcellular">updatetoolargeforcellular</a></li><li><a href="sap.CacheManager.html#event:cacheinvalidated">cacheinvalidated</a></li><li><a href="sap.CacheManager.html#event:noviewerfound">noviewerfound</a></li></ul><h3>Namespaces</h3><ul><li><a href="cordova.html">cordova</a></li><li><a href="cordova.plugins.html">plugins</a></li><li><a href="cordova.plugins.printer.html">printer</a></li><li><a href="sap.html">sap</a></li><li><a href="sap.AppPreferences.html">AppPreferences</a></li><li><a href="sap.AppSettings.html">AppSettings</a></li><li><a href="sap.AppUpdate.html">AppUpdate</a></li><li><a href="sap.AuthProxy.html">AuthProxy</a></li><li><a href="sap.AuthProxy.OAuth2.html">OAuth2</a></li><li><a href="sap.AuthProxy.OTP.html">OTP</a></li><li><a href="sap.AuthProxy.SAML2.html">SAML2</a></li><li><a href="sap.CacheManager.html">CacheManager</a></li><li><a href="sap.Consent.html">Consent</a></li><li><a href="sap.DocumentService.html">DocumentService</a></li><li><a href="sap.E2ETrace.html">E2ETrace</a></li><li><a href="sap.EncryptedStorage.html">EncryptedStorage</a></li><li><a href="sap.FioriClient.html">FioriClient</a></li><li><a href="sap.Logger.html">Logger</a></li><li><a href="sap.Logon.html">Logon</a></li><li><a href="sap.Logon.Core.html">Core</a></li><li><a href="sap.OData.html">OData</a></li><li><a href="sap.Online.html">Online</a></li><li><a href="sap.Push.html">Push</a></li><li><a href="sap.Settings.html">Settings</a></li><li><a href="sap.Toolbar.html">Toolbar</a></li><li><a href="sap.Usage.html">Usage</a></li><li><a href="sap.VoiceRecording.html">VoiceRecording</a></li></ul><h3>Interfaces</h3><ul><li><a href="sap.VoiceRecording.Recording.html">Recording</a></li></ul><h3>Global</h3><ul><li><a href="global.html#checkAgreement">checkAgreement</a></li><li><a href="global.html#checkAndOpenEulaPsDialog">checkAndOpenEulaPsDialog</a></li><li><a href="global.html#credentialCallback">credentialCallback</a></li><li><a href="global.html#defaultPsFileName">defaultPsFileName</a></li><li><a href="global.html#getURLInfo">getURLInfo</a></li><li><a href="global.html#getWwwAppDirectory">getWwwAppDirectory</a></li><li><a href="global.html#handleDenyAgreement">handleDenyAgreement</a></li><li><a href="global.html#isChinaMainland">isChinaMainland</a></li><li><a href="global.html#isNull">isNull</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#logVersionBuildTime">logVersionBuildTime</a></li><li><a href="global.html#newNullLiteral">newNullLiteral</a></li><li><a href="global.html#precheckEulaPsDialog">precheckEulaPsDialog</a></li><li><a href="global.html#presetEulaPsTitle">presetEulaPsTitle</a></li><li><a href="global.html#readAppConfigForEulaPs">readAppConfigForEulaPs</a></li><li><a href="global.html#removeAgreement">removeAgreement</a></li><li><a href="global.html#removeAgreementForUser">removeAgreementForUser</a></li><li><a href="global.html#saveAgreement">saveAgreement</a></li><li><a href="global.html#saveAgreementForUser">saveAgreementForUser</a></li><li><a href="global.html#showEulaAndPs">showEulaAndPs</a></li><li><a href="global.html#validateHTMLText">validateHTMLText</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0</a>
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

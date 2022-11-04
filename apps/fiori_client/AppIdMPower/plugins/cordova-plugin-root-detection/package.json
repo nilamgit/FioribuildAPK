@@ -1,0 +1,65 @@
+{
+  "_from": "cordova-plugin-root-detection@*",
+  "_id": "cordova-plugin-root-detection@0.1.1",
+  "_inBundle": false,
+  "_integrity": "sha1-75Fu96AKMOMR6lWT17L0q1TSzq8=",
+  "_location": "/cordova-plugin-root-detection",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "cordova-plugin-root-detection@*",
+    "name": "cordova-plugin-root-detection",
+    "escapedName": "cordova-plugin-root-detection",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-root-detection/-/cordova-plugin-root-detection-0.1.1.tgz",
+  "_shasum": "ef916ef7a00a30e311ea5593d7b2f4ab54d2ceaf",
+  "_spec": "cordova-plugin-root-detection@*",
+  "_where": "/Users/nilam1.methe/FioribuildApk/SMPDecommissioningmpower/apps/fiori_client/AppIdMPower",
+  "author": {
+    "name": "Yury Trykov",
+    "url": "http://trykov.ru/"
+  },
+  "bugs": {
+    "url": "https://github.com/trykovyura/cordova-plugin-root-detection/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-root-detection",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova Plugin for detecting if the device running the app is rooted.",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/trykovyura/cordova-plugin-root-detection#readme",
+  "keywords": [
+    "cordova",
+    "detection",
+    "detector",
+    "root",
+    "rooted",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-root-detection",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trykovyura/cordova-plugin-root-detection.git"
+  },
+  "version": "0.1.1"
+}

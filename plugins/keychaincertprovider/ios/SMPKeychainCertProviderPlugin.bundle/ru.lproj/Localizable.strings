@@ -1,0 +1,45 @@
+/* XMSG */
+"incorrect_password" = "Неправильный пароль, введите еще раз.";
+
+/* XMSG */
+"please_input" = "Введите пароль к сертификату.";
+
+/* XTIT: Dialog title */
+"import_certificate" = "Импортируйте сертификат.";
+
+/* XBUT: Ok buton */
+"ok" = "ОК";
+
+/* XMSG */
+"fail_to_import" = "Сертификат клиента (%d) не импортирован.";
+
+/* XMSG */
+"error" = "Ошибка";
+
+/* XBUT: Cancel button */
+"cancel" = "Отменить";
+
+/* XFLD: password field */
+"password" = "Пароль";
+
+/* XMSG */
+"fail_to_load" = "Сертификат провайдера не загружен.";
+
+/* XMSG */
+"please_input_certificate" = "Введите путь к файлу сертификата и пароль.";
+
+/* XMSG */
+"missing_file_path" = "Не указан путь к файлу сертификата и пароль, введите еще раз.";
+
+/* XMSG */
+"certificate_not_exist" = "Файл сертификата не существует; введите путь к файлу и пароль еще раз.";
+
+/* XMSG */
+"password_incorrect" = "Неправильный пароль, введите еще раз.";
+
+/* XMSG */
+"fail_to_import_certificate" = "Сертификат из файла не импортирован, проверьте настройки и повторите попытку.";
+
+/* XFLD: File name field */
+"file_name" = "Имя файла";
+

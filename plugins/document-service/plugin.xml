@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="kapsel-plugin-document-service" 
+    version="4.5.3">
+    
+    <name>DocumentService</name>
+
+    <author>SAP SE</author>
+
+    <license>SAP Mobile Platform SDK "License Agreement"</license>    
+
+    <engines>
+        <engine name="cordova" version="&gt;=9.0.0" />
+        <engine name="cordova-android" version="&gt;=9.0.0" />
+        <engine name="cordova-ios" version="&gt;=6.1.0" />
+        <engine name="cordova-windows" version="&gt;=6.0.0" />
+    </engines>
+
+    <dependency id="@sap/kapsel-plugin-logon" version="4.5.3"/>
+    <dependency id="@sap/kapsel-plugin-attachmentviewer" version="4.5.3"/>
+    <dependency id="@sap/kapsel-plugin-encryptedstorage" version="4.5.3"/>
+    <dependency id="@sap/kapsel-plugin-logger" version="4.5.3"/>
+
+    <dependency id="@sap/cordova-plugin-file-transfer" version="4.5.3"/>
+    <dependency id="cordova-plugin-android-permissions" />
+    <dependency id="cordova-plugin-customconfigparameters" />
+
+    <js-module name="CmisService" src="www/cmis.js"/>
+    <js-module name="JQuery" src="www/jquery-3.5.0.min.js"/>
+    <js-module name="DocumentService" src="www/DocumentService.js">
+        <clobbers target="sap.DocumentService"/>
+    </js-module>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="DocumentService">
+                <param name="android-package" value="com.documentservice.plugin.DocumentService"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
+    </platform>
+</plugin>

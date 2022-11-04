@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="kapsel-plugin-cdsprovider"
+    version="4.5.3">
+
+  <name>CDSProvider</name>
+
+  <description>The Certificate Delivery Services (CDS) provider is a Hybrid SDK (Kapsel) plugin that contacts the SAP Mobile Secure server to provide a clientside certificate. You can use this certificate to authenticate with SAP back-end systems. / Doc URL: https://uacp2.hana.ondemand.com/doc/d9c75eebcfa840c8a4aa4b0e6a8136de/3.0.14/en-US/0ad4596cb7cd4eb896e61af58f0b1d8e.html</description>
+
+  <author>SAP SE</author>
+
+  <license>SAP Mobile Platform SDK "License Agreement"</license>
+
+  <engines>
+    <engine name="cordova" version="&gt;=9.0.0" />
+    <engine name="cordova-android" version="&gt;=9.0.0" />
+    <engine name="cordova-ios" version="&gt;=6.1.0" />
+  </engines>
+
+  <dependency id="@sap/kapsel-plugin-logon" version="4.5.3"/>
+
+  <platform name="android">
+
+    <lib-file src="android/libs/CDSProvider-3.16.24.aar"/>
+    <framework src="org.bouncycastle:bcprov-jdk15on:1.60" />
+    <framework src="org.bouncycastle:bcpkix-jdk15on:1.60" />
+
+    <framework custom="true" src="android/cdsprovider.gradle" type="gradleReference"/>
+
+    <config-file parent="/manifest/application" target="AndroidManifest.xml">
+      <meta-data android:name="com.sap.mobilesecure.certificateService" android:value="com.sap.smp.client.android.cdsprovider.CDSProvider"/>
+    </config-file>
+  </platform>
+
+  <platform name="ios">
+    <source-file src="ios/libs/libCDSProvider.a" framework="true"/>
+
+    <config-file target="*-Info.plist" parent="com.sap.mobilesecure.certificateService">
+      <string>CDSProvider</string>
+    </config-file>
+  </platform>
+</plugin>

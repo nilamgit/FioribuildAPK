@@ -1,0 +1,13 @@
+{
+  "name": "@sap/kapsel-plugin-consent",
+  "version": "4.5.3",
+  "description": "Kapsel Consent Plugin",
+  "cordova": {
+    "id": "kapsel-plugin-consent",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [],
+  "author": "SAP SE"
+}

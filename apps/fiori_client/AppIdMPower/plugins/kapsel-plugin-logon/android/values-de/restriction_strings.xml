@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+    <!-- XFLD: -->
+    <string name="restriction_title_appID">"Anwendungs-ID"</string>
+    <string name="restriction_description_appID">"App-ID, mit der die Anwendung in der Data-Vault identifiziert wird. Wenn Sie SMP verwenden, sollte die ID mit der App-ID der Zielanwendung übereinstimmen. Beachten Sie, dass dieser Wert nicht der Paketname ist. Der Paketname dient hauptsächlich zur Identifikation von Anwendungen in App Stores."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_fioriURL">"SAP-Fiori-Server-URL"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_fioriURL">"Vollständige URL der Zielanwendung. Wenn Ihre Anwendung SMP nicht verwendet, navigiert sie direkt zu dieser URL, wenn die Anmeldung abgeschlossen ist. Wenn Ihre Anwendung SAP Mobile Platform verwendet, wird diese URL geparst und wie folgt verwendet: 1. Das URL-Schema (das HTTP oder HTTPS sein muss) bestimmt den Initialwert des Kennzeichens \"https\" im Registrierungsdialog. Der Host und der Port in der URL bestimmen die entsprechenden Initialwerte im Registrierungsdialog. Wenn kein Port angegeben wird, wird standardmäßig der Port 443 verwendet. 2. Das URL-Suffix (alles nach Host und Port) wird an die URL angehängt, an der sich der Benutzer registriert. Obwohl es wahrscheinlich ist, dass die Werte für Schema, Host und Port dieselben wie in 1. sind, können die Benutzer diese Werte ändern. Das Suffix kann jedoch nicht verändert werden. Wenn Sie SMP verwenden, legen Sie Schema, Host und Port Ihres SMP-Servers fest und hängen das Suffix des SAP-Fiori-Endpoints an. Beispiel: \'https://my.smp.server:8081/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html\'"</string>
+
+     <!-- XFLD: -->
+     <string name="restriction_title_appName">"Anwendungsname"</string>
+     <!-- XMSG: -->
+     <string name="restriction_description_appName">"Zusätzliche Eigenschaft zum Festlegen des Namens der SAP-Fiori-Anwendung, der auf dem Anmeldebildschirm angezeigt wird. Der Standardname der App ist SAP Fiori Client. Dieser wird verwendet, wenn kein Name angegeben ist."</string>
+
+     <!-- XFLD: -->
+     <string name="restriction_title_fioriURLIsSMP">"SMP-URL verweist auf SMP-Server"</string>
+     <!-- XMSG: -->
+     <string name="restriction_description_fioriURLIsSMP">"Wenn Sie die SMP verwenden, setzen Sie diesen Parameter auf \"true\", um die Registrierung durchzuführen."</string>
+
+     <!-- XFLD: -->
+     <string name="restriction_title_prefetch">"Prefetch-Web-Ressourcen"</string>
+     <!-- XMSG: -->
+     <string name="restriction_description_prefetch">"Ruft SAP-Fiori-App-Web-Ressourcen vom SAP-Fiori-Frontend-Server ab und lädt diese auf das Gerät eines Benutzers herunter. Nach dem ersten Download werden alle App-Aktualisierungen vom SAP-Fiori-Frontend-Server abgerufen und heruntergeladen."</string>
+
+     <!-- XFLD: -->
+    <string name="restriction_title_certificate">"Client-Zertifikatsanbieter"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_certificate">"Client-Zertifikatsanbieter"</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_autoSelectSingleCert">"Client-Zertifikatsanbieter automatisch auswählen"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_autoSelectSingleCert">"Wenn nur ein Clientzertifikat verfügbar ist, wählen Sie dieses Zertifikat automatisch für die gegenseitige Authentifizierung aus."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_communicatorId">"Communicator-ID"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_communicatorId">"Communicator-ID für SMP-HCPms-Registrierung; Standard ist REST."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_keysize">"Schlüsselgröße für Afaria-Zertifikatsanbieter"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_keysize">"Optionales Argument für den Afaria-Zertifikatsanbieter. Dieses Argument legt die Bitrate der öffentlichen/privaten Schlüssel fest. Ein leerer oder ungültiger Wert erhält den Standardwert 2048."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_idpLogonURL">"URL für Identity-Provider-Anmeldung"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_idpLogonURL">"URL, die die Identity-Provider-Anmeldung mit dem von SAP Authenticator für SSO übergebenen Benutzernamen/App-Code neu lädt."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_enableCacheManager">"Cache-Manager aktivieren"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_enableCacheManager">"Aktiviert das Cache-Manager-Plugin."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_allowSavingFormCredentials">"Formular-Credentials sichern"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_allowSavingFormCredentials">"Formular-Credentials dürfen gesichert und in der Zukunft vorausgefüllt werden."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_disablePasscode">"App-Code-Bild deaktivieren"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_disablePasscode">"Wenn wahr, wird das App-Code-Bild nicht angezeigt. Muss falsch sein, wenn mehrere Benutzer unterstützt werden."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_passcodePolicyExpirationDays">"App-Code-Richtlinie: Gültigkeitsdauer in Tagen"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_passcodePolicyExpirationDays">"App-Code-Richtlinie der Data-Vault. Hinweis: Wenn Sie SMP verwenden, wird die App-Code-Richtlinie vom Server bestimmt."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_passcodePolicyHasDigits">"App-Code-Richtlinie: Muss Ziffern enthalten"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_passcodePolicyHasDigits">"App-Code-Richtlinie der Data-Vault. Hinweis: Wenn Sie SMP verwenden, wird die App-Code-Richtlinie vom Server bestimmt."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_passcodePolicyHasLowerCaseLetters">"App-Code-Richtlinie: Muss Kleinbuchstaben enthalten"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_passcodePolicyHasLowerCaseLetters">"App-Code-Richtlinie der Data-Vault. Hinweis: Wenn Sie SMP verwenden, wird die App-Code-Richtlinie vom Server bestimmt."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_passcodePolicyHasSpecialLetters">"App-Code-Richtlinie: Muss Sonderzeichen enthalten"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_passcodePolicyHasSpecialLetters">"App-Code-Richtlinie der Data-Vault. Hinweis: Wenn Sie SMP verwenden, wird die App-Code-Richtlinie vom Server bestimmt."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_passcodePolicyHasUpperCaseLetters">"App-Code-Richtlinie: Muss Großbuchstaben enthalten"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_passcodePolicyHasUpperCaseLetters">"App-Code-Richtlinie der Data-Vault. Hinweis: Wenn Sie SMP verwenden, wird die App-Code-Richtlinie vom Server bestimmt."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_passcodePolicyDefaultAllowed">"App-Code-Richtlinie: App-Code-Option deaktivierbar"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_passcodePolicyDefaultAllowed">"App-Code-Richtlinie der Data-Vault. Hinweis: Wenn Sie SMP verwenden, wird die App-Code-Richtlinie vom Server bestimmt."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_passcodePolicyLockTimeout">"App-Code-Richtlinie: Sperr-Timeout"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_passcodePolicyLockTimeout">"App-Code-Richtlinie der Data-Vault. Hinweis: Wenn Sie SMP verwenden, wird die App-Code-Richtlinie vom Server bestimmt."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_passcodePolicyMinLength">"App-Code-Richtlinie: Mindestlänge"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_passcodePolicyMinLength">"App-Code-Richtlinie der Data-Vault. Hinweis: Wenn Sie SMP verwenden, wird die App-Code-Richtlinie vom Server bestimmt."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_passcodePolicyMinUniqueChars">"App-Code-Richtlinie: Mindestanzahl der unterschiedlichen Zeichen"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_passcodePolicyMinUniqueChars">"App-Code-Richtlinie der Data-Vault. Hinweis: Wenn Sie SMP verwenden, wird die App-Code-Richtlinie vom Server bestimmt."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_passcodePolicyRetryLimit">"App-Code-Richtlinie: Maximale Anzahl der Anmeldeversuche"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_passcodePolicyRetryLimit">"App-Code-Richtlinie der Data-Vault. Hinweis: Wenn Sie SMP verwenden, wird die App-Code-Richtlinie vom Server bestimmt."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_passcodePolicyAllowFingerprint">"App-Code-Richtlinie: Fingerabdruck-Authentifizierung zulassen"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_passcodePolicyAllowFingerprint">"App-Code-Richtlinie der Data-Vault. Hinweis: Wenn Sie SAP Mobile Platform verwenden, wird die App-Code-Richtlinie vom Server bestimmt."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_authType">"Berechtigungstyp"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_authType">"Legen Sie den Berechtigungstyp nur für OAuth (als oauth2) oder SAML (als saml2.web.post) fest."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_oauth2.authorizationEndpoint">"OAuth-Berechtigungsendpunkt"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_oauth2.authorizationEndpoint">"URL, die dem Benutzer Berechtigung verleiht."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_oauth2.tokenEndpoint">"OAuth-Tokenendpunkt"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_oauth2.tokenEndpoint">"URL, mit der die Token abgerufen werden."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_oauth2.grantType">"OAuth-Erteilungsart"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_oauth2.grantType">"Zu verwendende Erteilungsart."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_oauth2.clientID">"OAuth-Client-ID"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_oauth2.clientID">"Client-ID, die die Anwendung identifizierst."</string>
+
+    <!-- XFLD: -->
+    <string name="restriction_title_logoffHandler">"Abmeldungsverarbeitung"</string>
+    <!-- XMSG: -->
+    <string name="restriction_description_logoffHandler">"Um festzulegen, ob Abmeldung vom Client (Standard) oder vom Server verarbeitet wird."</string>
+
+    <!-- XFLD: -->
+    <string name="handle_title_x509">"X509-Herausforderungen verarbeiten"</string>
+    <!-- XMSG: -->
+    <string name="handle_description_x509">"X509-Herausforderungen für Websicht verarbeiten"</string>
+
+    <!-- XFLD: -->
+    <string name="webview_type">"Websichttyp"</string>
+    <!-- XMSG: -->
+    <string name="webview_type_description">"Wird für die Anzeige des Launchpads in benutzerdefinierten Registern gesetzt (Standard ist Websicht)."</string>
+</resources>

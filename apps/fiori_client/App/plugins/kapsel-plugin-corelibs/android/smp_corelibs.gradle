@@ -1,0 +1,32 @@
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+// Workaround for jcenter having broken Google artifacts
+// This will force Gradle to resolve from the Google Maven repo
+// before checking jcenter. Cordova Jira CB-14127
+def google_maven = repositories.maven {
+    name 'maven_google'
+    url 'https://maven.google.com'
+}
+repositories.remove(google_maven)
+repositories.addFirst(google_maven)
+
+// Apply values after project's build-extras.gradle
+cdvPluginPostBuildExtras.add({
+    dependencies {
+        compile(name:'corelibs-plugin-4.5.3', ext:'aar')
+        compile(name:'Common-3.16.24', ext:'aar')
+        compile(name:'ClientHubSLL-3.16.24', ext:'aar')
+        compile(name:'CoreServices-3.16.24', ext:'aar')
+        compile(name:'Request-3.16.24', ext:'aar')
+        compile(name:'DataVaultLib-3.16.24', ext:'aar')
+        compile(name:'ClientLog-3.16.24', ext:'aar')
+        compile(name:'SupportabilityFacade-3.16.24', ext:'aar')
+        compile(name:'HttpConversation-3.16.24', ext:'aar')
+        compile(name:'HttpConvAuthFlows-3.16.24', ext:'aar')
+        compile(name:'E2ETrace-3.16.24', ext:'aar')
+    }
+})

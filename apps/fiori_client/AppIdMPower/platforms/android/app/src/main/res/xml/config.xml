@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ril.fiori.mpower" version="2.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
+    <feature name="CDVOrientation">
+        <param name="android-package" value="cordova.plugins.screenorientation.CDVOrientation" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="PrivacyScreenPlugin">
+        <param name="android-package" value="org.devgeeks.privacyscreen.PrivacyScreenPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Printer">
+        <param name="android-package" value="de.appplant.cordova.plugin.printer.Printer" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="AuthProxy">
+        <param name="android-package" value="com.sap.mp.cordova.plugins.authProxy.AuthProxy" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="AttachmentHandler">
+        <param name="android-package" value="com.sap.mp.cordova.plugins.attachmentViewer.AttachmentViewer" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="BarcodeScanner">
+        <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
+    </feature>
+    <feature name="Online">
+        <param name="android-package" value="com.sap.mp.cordova.plugins.online.Online" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="CacheManager">
+        <param name="android-package" value="com.sap.mp.cordova.plugins.cacheManager.CacheManager" />
+    </feature>
+    <feature name="Logging">
+        <param name="android-package" value="com.sap.mp.cordova.plugins.logger.Logger" />
+    </feature>
+    <feature name="toolbar">
+        <param name="android-package" value="com.sap.mp.cordova.plugins.toolbar.Toolbar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="LaunchMyApp">
+        <param name="android-package" value="nl.xservices.plugins.LaunchMyApp" />
+    </feature>
+    <feature name="MockGpsChecker">
+        <param name="android-package" value="com.sandata.MockGpsChecker" />
+    </feature>
+    <feature name="GpsDetectionPlugin">
+        <param name="android-package" value="com.butterflyeffect.plugins.GPSDetectionPlugin" />
+    </feature>
+    <feature name="RootDetection">
+        <param name="android-package" value="ru.trykov.root.RootDetection" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="SSLCertificateChecker">
+        <param name="android-package" value="nl.xservices.plugins.SSLCertificateChecker" />
+    </feature>
+    <feature name="AppPreferences">
+        <param name="android-package" value="com.sap.mp.cordova.plugins.apppreferences.AppPreferences" />
+    </feature>
+    <feature name="i18n">
+        <param name="android-package" value="com.sap.mp.cordova.plugins.i18n.I18N" />
+    </feature>
+    <feature name="MAFLogonCoreCDVPluginJS" required="true">
+        <param name="android-package" value="com.sap.maf.html5.android.MAFLogonCoreCDVPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="FioriClient">
+        <param name="android-package" value="com.sap.mp.cordova.plugins.fioriclient.FioriClient" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="SMPSettingsExchangePlugin" onload="true">
+        <param name="android-package" value="com.sap.mp.settingsexchange.SettingsExchange" />
+    </feature>
+    <name>MPower Retail</name>
+    <author>CompanyName</author>
+    <description>
+        A custom Fiori Client application.
+    </description>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <hook src="scripts/before_platform_add/install_npm_packages.js" type="before_platform_add" />
+    <hook src="scripts/before_prepare/updateAppConfig.js" type="before_prepare" />
+    <icon density="ldpi" src="res/android/ldpi.png" />
+    <icon density="mdpi" src="res/android/mdpi.png" />
+    <icon density="hdpi" src="res/android/hdpi.png" />
+    <icon density="xhdpi" src="res/android/xhdpi.png" />
+    <splash density="land-hdpi" src="res/screen/android/drawable-land-hdpi.png" />
+    <splash density="land-ldpi" src="res/screen/android/drawable-land-ldpi.png" />
+    <splash density="land-mdpi" src="res/screen/android/drawable-land-mdpi.png" />
+    <splash density="land-xhdpi" src="res/screen/android/drawable-land-xhdpi.png" />
+    <splash density="port-hdpi" src="res/screen/android/drawable-port-hdpi.png" />
+    <splash density="port-ldpi" src="res/screen/android/drawable-port-ldpi.png" />
+    <splash density="port-mdpi" src="res/screen/android/drawable-port-mdpi.png" />
+    <splash density="port-xhdpi" src="res/screen/android/drawable-port-xhdpi.png" />
+    <allow-intent href="market:*" />
+    <allow-intent href="sapauthenticator:*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-navigation href="data:*" />
+    <hook src="scripts/android/after_platform_add/prepareRestriction.js" type="after_platform_add" />
+    <hook src="scripts/android/after_platform_add/resizeableActivity.js" type="after_platform_add" />
+    <hook src="scripts/android/before_plugin_install/manageManifest.js" type="before_plugin_install" />
+    <hook src="scripts/android/after_prepare/addSupportabilityProperties.js" type="after_prepare" />
+    <hook src="scripts/android/after_prepare/disableThreadedScrolling.js" type="after_prepare" />
+    <hook src="scripts/android/after_prepare/makeFeatureNotRequired.js" type="after_prepare" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="ErrorUrl" value="file:///android_asset/www/CannotReachHost.html" />
+    <preference name="useBusyIndicator" value="false" />
+    <preference name="homeUrlkey" value="fioriURL" />
+    <preference name="showTitle" value="true" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="FadeSplashScreen" value="false" />
+    <preference name="helpUrl" value="https://help.sap.com/doc/d55f83e12e4b40779158fbaf08fe0f14/1.12/en-US/index.html" />
+    <preference name="trustUserCertificates" value="true" />
+    <preference name="cleartextTrafficPermitted" value="true" />
+    <preference name="UserAgentSuffix" value="SAPFioriClient/4.5.3" />
+    <preference name="android-minSdkVersion" value="22" />
+    <preference name="Orientation" value="default" />
+    <preference name="CustomURLSchemePluginClearsAndroidIntent" value="true" />
+    <preference name="SAPKapselRemeberSystemCertificateSelection" value="true" />
+</widget>

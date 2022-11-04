@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="kapsel-plugin-e2etrace"
+    version="4.5.3">
+
+    <name>E2ETrace</name>
+
+    <description>Handles end-to-end tracing in Hybrid SDK (Kapsel) applications. / Doc URL: https://uacp2.hana.ondemand.com/doc/d9c75eebcfa840c8a4aa4b0e6a8136de/3.0.14/en-US/120a052fea0f4196a6cdf6b63779fc29.html</description>
+
+    <author>SAP SE</author>
+
+    <license>SAP Mobile Platform SDK "License Agreement"</license>
+
+
+    <engines>
+      <engine name="cordova" version="&gt;=9.0.0" />
+      <engine name="cordova-android" version="&gt;=9.0.0" />
+      <engine name="cordova-ios" version="&gt;=6.1.0" />
+      <engine name="cordova-windows" version="&gt;=6.0.0" />
+    </engines>
+
+    <dependency id="@sap/kapsel-plugin-xhook" version="4.5.3"/>
+    <dependency id="@sap/kapsel-plugin-corelibs" version="4.5.3"/>
+    <dependency id="@sap/kapsel-plugin-inappbrowser" version="4.5.3"/>
+    <dependency id="@sap/kapsel-plugin-logon" version="4.5.3"/>
+
+    <js-module name="E2ETrace" src="www/e2etrace.js">
+        <clobbers target="sap.E2ETrace"/>
+    </js-module>
+
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/widget">
+			<feature name="E2ETrace">
+				<param name="android-package" value="com.sap.mp.cordova.plugins.e2etrace.E2ETrace"/>
+			</feature>
+		</config-file>
+		<lib-file src="android/libs/e2etrace-plugin-4.5.3.aar"/>
+        <framework src="android/smp_e2etrace.gradle" custom="true" type="gradleReference" />
+	</platform>
+	<platform name="ios">
+		<config-file target="config.xml" parent="/widget">
+			<feature name="E2ETrace">
+				<param name="ios-package" value="SMPE2ETracePlugin"/>
+			</feature>
+		</config-file>
+		<source-file framework="true" src="ios/libs/libSMPE2ETracePlugin.a"/>
+	</platform>
+     <platform name="windows">
+	    <!-- command proxy for windows8 platform -->
+	    <js-module name="e2etrace_proxy_win" src="windows/src/e2etrace_proxy_win.js">
+	        <clobbers target="e2etrace_proxy_win"/>
+	    </js-module>
+		
+		<!-- WIN 10-->
+		<resource-file src="windows/windows10/bin/SAP.CoreLibs.dll" target="plugins\kapsel-plugin-e2etrace\windows10\bin\SAP.CoreLibs.dll" versions="&gt;8.1" reference="true"/>
+		<framework src="windows/windows10/bin/SAP.E2ETrace.winmd" target-dir="windows10/bin" versions="&gt;8.1"/>
+		
+	 </platform>
+</plugin>

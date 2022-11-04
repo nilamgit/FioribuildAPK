@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="de.appplant.cordova.plugin.printer"
+        version="4.5.3">
+
+    <name>Printer</name>
+
+    <description>
+        Cordova plugin to print HTML documents using AirPrint
+        and Android Printing Framework. / Doc URL: https://github.com/katzer/cordova-plugin-printer/blob/master/README.md
+    </description>
+
+    <repo>
+        https://github.com/katzer/cordova-plugin-printer.git
+    </repo>
+
+    <keywords>
+        print, printer, ios, android, google cloud, air print
+    </keywords>
+
+    <license>Apache 2.0</license>
+
+    <author>Sebastián Katzer</author>
+
+    <engines>
+      <engine name="cordova" version="&gt;=9.0.0" />
+      <engine name="cordova-android" version="&gt;=9.0.0" />
+      <engine name="cordova-ios" version="&gt;=6.1.0" />
+      <engine name="cordova-windows" version="&gt;=6.0.0" />
+    </engines>
+    
+    <dependency id="@sap/kapsel-plugin-corelibs" version="4.5.3"/>    
+
+    <!-- interface -->
+    <js-module src="www/printer.js" name="Printer">
+        <clobbers target="plugin.printer" />
+        <clobbers target="cordova.plugins.printer" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Printer">
+                <param name="ios-package" value="SMPPrintPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="ios/libs/libSMPPrintPlugin.a" framework="true"/>
+
+    </platform>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Printer">
+                <param name="android-package" value="de.appplant.cordova.plugin.printer.Printer"/>
+            </feature>
+        </config-file>
+		<config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+		</config-file>
+        <lib-file src="android/libs/print-plugin-4.5.3.aar"/>
+        <framework src="android/smp_print.gradle" custom="true" type="gradleReference" />
+		<framework src="com.android.support:support-v4:28.0.0" />
+    </platform>
+    
+     <!-- windows -->
+    <platform name="windows">
+		<js-module src="windows/src/Printer.js" name="WinPrinter">
+            <clobbers target="window.Printer" />
+        </js-module>
+    </platform>
+</plugin>

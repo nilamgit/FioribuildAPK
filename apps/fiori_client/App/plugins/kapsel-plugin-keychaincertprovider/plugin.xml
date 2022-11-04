@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="kapsel-plugin-keychaincertprovider"
+    version="4.5.3">
+    
+    <name>KeychainCertProvider</name>
+    <description>A Cordova plugin that imports client certificates from email for keychain to Kapsel applications and the Fiori Client for mutual authentication</description>
+	
+    <author>SAP SE</author>
+
+    <license>SAP Mobile Platform SDK "License Agreement"</license>
+
+    <engines>
+      <engine name="cordova" version="&gt;=9.0.0" />
+      <engine name="cordova-ios" version="&gt;=6.1.0" />
+    </engines>
+    
+    <!-- the certificate provider interface file (certificateprovider.h) is from logon plugin -->
+    <dependency id="@sap/kapsel-plugin-logon" version="4.5.3"/>
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+			<feature name="KeychainCertProvider">
+				<param name="ios-package" value="SMPKeychainCertProviderPlugin"/>
+				<param name="onload" value="true" />
+			</feature>
+			<preference name="emailCertificateLabel" value="Client Certificate" />
+		</config-file>
+		<!-- Updates the plist so that the app can open files with custom file extensions, in this case just .fccert files -->
+		<!-- Adds DocumentType to allow this app to open certain files -->
+		<config-file target="*-Info.plist" parent="CFBundleDocumentTypes">
+			<array>
+			  <dict>
+				<key>CFBundleTypeName</key>
+				<string>fiori certificate</string>
+                <key>LSHandlerRank</key>
+                <string>Owner</string>
+				<key>LSItemContentTypes</key>
+				<array>
+				  <string>com.sap.fccert</string>
+				</array>
+			  </dict>
+			</array>
+		</config-file>
+		<!-- Adds Exported UTI to allow other apps to know what kinds of files this app can open -->
+		<!-- Replace fccert with your custom file extension if you want to customize your certificates file extension. -->
+		<config-file target="*-Info.plist" parent="UTImportedTypeDeclarations">
+			<array>
+			<dict>
+                <key>UTTypeConformsTo</key>
+                <array>
+                    <string>public.data</string>
+                </array>
+				<key>UTTypeDescription</key>
+				<string>fiori certificate</string>
+				<key>UTTypeIdentifier</key>
+				<string>com.sap.fccert</string>
+				<key>UTTypeTagSpecification</key>
+				<dict>
+					<key>public.filename-extension</key>
+					<array>
+						<string>fccert</string>
+					</array>
+				</dict>
+			</dict>
+			</array>
+		</config-file>
+		<resource-file src="ios/SMPKeychainCertProviderPlugin.bundle" />
+		<header-file src="ios/SMPKeychainCertProviderPlugin.h" />
+		<source-file src="ios/SMPKeychainCertProviderPlugin.m" />
+		<header-file src="ios/KeychainCertProvider.h" />
+		<source-file src="ios/KeychainCertProvider.m" />
+		<header-file src="ios/X509FileCertProvider.h" />
+		<source-file src="ios/X509FileCertProvider.m" />
+	</platform>
+	</plugin>

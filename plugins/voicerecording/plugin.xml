@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="kapsel-plugin-voicerecording"
+    version="4.5.3">
+    
+    <name>Voice Recording</name>
+
+    <engines>
+      <engine name="cordova" version="&gt;=9.0.0" />
+      <engine name="cordova-android" version="&gt;=9.0.0" />
+      <engine name="cordova-ios" version="&gt;=6.1.0" />
+      <engine name="cordova-windows" version="&gt;=6.0.0" />
+    </engines>
+
+    <js-module name="VoiceRecording" src="www/recording.js">
+        <clobbers target="sap.VoiceRecording" />
+    </js-module>
+    <js-module name="VoiceRecording-AudioRecorder" src="www/audiorecorder.js" />
+    <js-module name="VoiceRecording-AudioScreen" src="www/screen.js" />
+    <js-module name="VoiceRecording-Utils" src="www/recordingutils.js" />
+
+    <dependency id="@sap/kapsel-plugin-encryptedstorage" version="4.5.3"/>
+    <dependency id="@sap/kapsel-plugin-i18n" version="4.5.3"/>
+    <dependency id="cordova-plugin-file" />
+    <dependency id="cordova-plugin-screen-orientation" />
+    <asset target="plugins/kapsel-plugin-voicerecording/www/i18n" src="www/i18n" />
+    <asset target="plugins/kapsel-plugin-voicerecording/www/dialogs.css" src="www/dialogs.css" />    
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/widget">
+            <feature name="VoiceRecording">
+                <param name="android-package" value="com.sap.mp.cordova.plugins.recording.VoiceRecording" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+            <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        </config-file>
+         <lib-file src="android/libs/voicerecording-plugin-4.5.3.aar" />
+         <framework custom="true" src="android/smp_voicerecording.gradle" type="gradleReference" />
+    </platform>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/widget">
+            <feature name="VoiceRecording">
+                <param name="ios-package" value="SMPVoiceRecordingPlugin" />
+            </feature>
+        </config-file>
+        <source-file framework="true" src="ios/libs/libSMPVoiceRecordingPlugin.a" />
+        <framework src="AudioToolbox.framework" />
+    </platform>
+    <platform name="windows">
+        <js-module src="windows/src/voicerecording_proxy_win.js" name="voicerecording_proxy_win">
+                <merges target="voicerecording_proxy_win" />
+        </js-module>
+        <config-file target="package.appxmanifest" parent="/Package/Capabilities">
+            <DeviceCapability Name="webcam" />
+            <DeviceCapability Name="microphone" />
+        </config-file>
+
+		<!-- WIN 10-->
+		<resource-file src="windows/windows10/ARM/SAP.CoreLibs.dll" target="plugins\kapsel-plugin-voicerecording\windows10\ARM\SAP.CoreLibs.dll" versions="&gt;8.1" arch="ARM" reference="true"/>
+		<resource-file src="windows/windows10/x64/SAP.CoreLibs.dll" target="plugins\kapsel-plugin-voicerecording\windows10\x64\SAP.CoreLibs.dll" versions="&gt;8.1" arch="x64" reference="true"/>
+		<resource-file src="windows/windows10/x86/SAP.CoreLibs.dll" target="plugins\kapsel-plugin-voicerecording\windows10\x86\SAP.CoreLibs.dll" versions="&gt;8.1" arch="x86" reference="true"/>
+		
+        <framework src="windows/windows10/ARM/SAP.VoiceRecording.winmd" target-dir="windows10/ARM" versions="&gt;8.1" arch="ARM"/>
+
+        <framework src="windows/windows10/x86/SAP.VoiceRecording.winmd" target-dir="windows10/x86" versions="&gt;8.1" arch="x86"/>
+
+        <framework src="windows/windows10/x64/SAP.VoiceRecording.winmd" target-dir="windows10/x64" versions="&gt;8.1" arch="x64"/>
+
+    </platform>
+</plugin>

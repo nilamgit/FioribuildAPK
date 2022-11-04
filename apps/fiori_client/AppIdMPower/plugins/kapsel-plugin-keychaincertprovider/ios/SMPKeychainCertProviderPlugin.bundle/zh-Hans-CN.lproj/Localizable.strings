@@ -1,0 +1,45 @@
+/* XMSG */
+"incorrect_password" = "密码不正确，请重新输入。";
+
+/* XMSG */
+"please_input" = "请输入证书密码。";
+
+/* XTIT: Dialog title */
+"import_certificate" = "导入证书。";
+
+/* XBUT: Ok buton */
+"ok" = "确定";
+
+/* XMSG */
+"fail_to_import" = "未导入客户端证书 (%d)。";
+
+/* XMSG */
+"error" = "错误";
+
+/* XBUT: Cancel button */
+"cancel" = "取消";
+
+/* XFLD: password field */
+"password" = "密码";
+
+/* XMSG */
+"fail_to_load" = "未加载来自提供者的证书。";
+
+/* XMSG */
+"please_input_certificate" = "请输入证书文件路径和密码。";
+
+/* XMSG */
+"missing_file_path" = "缺少证书文件路径或密码，请重新输入。";
+
+/* XMSG */
+"certificate_not_exist" = "证书文件不存在，请重新输入文件路径和密码。";
+
+/* XMSG */
+"password_incorrect" = "密码不正确，请重新输入。";
+
+/* XMSG */
+"fail_to_import_certificate" = "未从文件中导入证书，请检查设置，然后重试。";
+
+/* XFLD: File name field */
+"file_name" = "文件名称";
+

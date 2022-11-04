@@ -1,0 +1,20 @@
+{
+  "name": "@sap/kapsel-plugin-voicerecording",
+  "version": "4.5.3",
+  "description": "Kapsel Voice Recording Plugin",
+  "cordova": {
+    "id": "kapsel-plugin-voicerecording",
+    "platforms": [
+      "android",
+      "ios",
+      "windows"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-windows"
+  ],
+  "author": "SAP SE"
+}

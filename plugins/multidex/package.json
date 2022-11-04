@@ -1,0 +1,16 @@
+{
+  "name": "@sap/kapsel-plugin-multidex",
+  "version": "4.5.3",
+  "description": "Kapsel Multidex Plugin",
+  "cordova": {
+    "id": "kapsel-plugin-multidex",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "SAP SE"
+}

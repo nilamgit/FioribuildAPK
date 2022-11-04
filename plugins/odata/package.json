@@ -1,0 +1,20 @@
+{
+  "name": "@sap/kapsel-plugin-odata",
+  "version": "4.5.3",
+  "description": "Kapsel OData Plugin",
+  "cordova": {
+    "id": "kapsel-plugin-odata",
+    "platforms": [
+      "android",
+      "ios",
+      "windows"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-windows"
+  ],
+  "author": "SAP SE"
+}

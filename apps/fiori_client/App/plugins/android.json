@@ -1,0 +1,132 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-android-support-gradle-release": {
+      "ANDROID_SUPPORT_VERSION": "28.0.0",
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "cordova-plugin-privacyscreen": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "de.appplant.cordova.plugin.printer": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-apppreferences": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-attachmentviewer": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-authproxy": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-barcodescanner": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-cachemanager": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-cdsprovider": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-consent": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-fioriclient": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-logger": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-logon": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-multidex": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-online": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-settings": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-toolbar": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-keychaincertprovider": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "cordova-plugin-customurlscheme": {
+      "URL_SCHEME": "com.ril.fiori.mpowerpub.xcallbackurl",
+      "ANDROID_SCHEME": " ",
+      "ANDROID_HOST": " ",
+      "ANDROID_PATHPREFIX": "/",
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "cordova-plugin-mock-gps-checker": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "cordova-plugin-android-gpsdetect": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "cordova-plugin-root-detection": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "cordova-plugin-sslcertificatechecker": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    }
+  },
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-corelibs": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-i18n": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    },
+    "kapsel-plugin-ui5": {
+      "PACKAGE_NAME": "com.ril.fiori.mpowerpub"
+    }
+  }
+}

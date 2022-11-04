@@ -1,0 +1,45 @@
+/* XMSG */
+"incorrect_password" = "كلمة المرور غير صحيحة، يُرجى إعادة الإدخال.";
+
+/* XMSG */
+"please_input" = "يُرجى إدخال كلمة مرور الشهادة.";
+
+/* XTIT: Dialog title */
+"import_certificate" = "استيراد الشهادة";
+
+/* XBUT: Ok buton */
+"ok" = "موافق";
+
+/* XMSG */
+"fail_to_import" = "لم يتم استيراد شهادة العميل (%d).";
+
+/* XMSG */
+"error" = "خطأ";
+
+/* XBUT: Cancel button */
+"cancel" = "إلغاء";
+
+/* XFLD: password field */
+"password" = "كلمة المرور";
+
+/* XMSG */
+"fail_to_load" = "لم يتم تحميل الشهادة من المزوِّد.";
+
+/* XMSG */
+"please_input_certificate" = "يُرجى إدخال مسار ملف الشهادة وكلمة المرور.";
+
+/* XMSG */
+"missing_file_path" = "كلمة المرور أو مسار ملف الشهادة مفقود، يُرجى إعادة الإدخال.";
+
+/* XMSG */
+"certificate_not_exist" = "ملف الشهادة غير موجود، يُرجى إعادة إدخال مسار الملف كلمة المرور.";
+
+/* XMSG */
+"password_incorrect" = "كلمة المرور غير صحيحة، يُرجى إعادة الإدخال.";
+
+/* XMSG */
+"fail_to_import_certificate" = "لم يتم استيراد الشهادة من الملف، يُرجى تحقق الإعدادات والمحاولة لاحقًا.";
+
+/* XFLD: File name field */
+"file_name" = "اسم الملف";
+
